@@ -1,74 +1,62 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyz: "abc" },
-//   "Hello World From React!"
-// );
-
-//Nested Elements
-// const heading = React.createElement("div", { id: "parent" }, [
-//   React.createElement("div",{ id: "child" },
-//     //Making Siblings
-//     [
-//       React.createElement("h1", {}, "Namaste React 🚀"),
-//       React.createElement("h2", {}, "I am an H2 Tag"),
-//     ]),
-//     React.createElement("div",{ id: "child2" },[
-//       //Making Siblings
-//       [
-//         React.createElement("h1", {}, "I am an H1 Tag"),
-//         React.createElement("h2", {}, "I am an H2 Tag"),
-//       ],
-//     ]),
-// ]);
-// console.log(heading);
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
-
-//React.createElement=>Object=>HTMLElement(render) --> This is core react
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading" },
-//   "Namaste React 🚀"
-// );
-
-//JSX -> HTML likes or XML likes syntax
-//React Element
-const JsxHeading = () => (
-  <h1 id="heading" tabIndex="1">
-    {" "}
-    Namaste React using JSX 🚀
-  </h1>
-);
-
-const num = 1000;
-//Functional Component
-const HeadingComponent = () => {
+//Header
+const Header = () => {
   return (
-    <>
-      <div id="container">
-        {/* we can call function inside here also */}
-        {JsxHeading()}
-        <JsxHeading />
-        <JsxHeading></JsxHeading>
-        <h1 className="heading">Namaste React Funcional Component</h1>;
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
+        />
       </div>
-      <div>
-        <h1 className="heading">Namaste React Funcional Component</h1>;
+      <div className="nav-item">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Conatct Us</li>
+          <li>Cart</li>
+        </ul>
       </div>
-    </>
+    </div>
   );
 };
 
-//Functional Component(short hand for 1 line code)
-// const HeadingComponent1 = () => (
-//   <h1 className="heading">Namaste React Funcional Component</h1>
-// );
+//ResturantCard
+const ResturantCard = () => {
+  return (
+    <div className="res-card">
+      <img className="res-logo" alt="res-logo" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/chkxewmdvnhloxmfawij"/>
+      <h1>Meghna Food</h1>
+      <h4>Biryani,North Indian,Asian</h4>
+      <h4>4.4 Stars</h4>
+      <h4>38 minutes</h4>
+    </div>
+  );
+};
+
+//Body
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        {/* ResurentCard */}
+        <ResturantCard />
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body/>
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-//for functional component
-root.render(<HeadingComponent />);
-//root.render(jsxHeading);
+root.render(<AppLayout />);

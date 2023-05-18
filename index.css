@@ -1,3 +1,40 @@
-#heading {
-  color: red;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav-item > ul {
+  font-size: 24px;
+  display: flex;
+  list-style: none;
+}
+
+.nav-item > ul > li {
+  padding: 10px;
+  margin: 10px; 
+}
+
+.search {
+  padding: 10px;
+}
+
+.res-card {
+  padding: 5px;
+  width: 200px;
+  height: 300px;
+
+}
+
+.res-card:hover{
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.res-logo{
+  width: 100%;
 }
