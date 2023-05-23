@@ -24,14 +24,21 @@ const Header = () => {
 };
 
 //ResturantCard
-const ResturantCard = () => {
+//we can also desctructure the props name as({resname,cuisine})
+const ResturantCard = (props) => {
+  console.log(props);
+  const { resName, cuisine, rating, timing } = props;
   return (
     <div className="res-card">
-      <img className="res-logo" alt="res-logo" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/chkxewmdvnhloxmfawij"/>
-      <h1>Meghna Food</h1>
-      <h4>Biryani,North Indian,Asian</h4>
-      <h4>4.4 Stars</h4>
-      <h4>38 minutes</h4>
+      <img
+        className="res-logo"
+        alt="res-logo"
+        src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/chkxewmdvnhloxmfawij"
+      />
+      <h1>{resName}</h1>
+      <h4>{cuisine}</h4>
+      <h4>{rating} Stars</h4>
+      <h4>{timing} minutes</h4>
     </div>
   );
 };
@@ -42,8 +49,18 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        {/* ResurentCard */}
-        <ResturantCard />
+        <ResturantCard
+          resName="Meghna Foods"
+          cuisine="Biryani,North Indian,Asian"
+          rating="4.4"
+          timing="38"
+        />
+        <ResturantCard
+          resName="KFC"
+          cuisine="Chicken Nugets,Fries,Burgers"
+          rating="4.3"
+          timing="30"
+        />
       </div>
     </div>
   );
@@ -53,7 +70,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body/>
+      <Body />
     </div>
   );
 };
