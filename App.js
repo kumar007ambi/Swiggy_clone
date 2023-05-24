@@ -61,6 +61,12 @@ const Body = () => {
           rating="4.3"
           timing="30"
         />
+         <ResturantCard
+          resName="Wow Momo"
+          cuisine="Chicken momo,Veg momo,Chicken fried momo"
+          rating="4"
+          timing="20"
+        />
       </div>
     </div>
   );
