@@ -1868,9 +1868,9 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <ResturantCard resData={resObj} />
-        <ResturantCard resData={resObj} />
-        <ResturantCard resData={resObj} />
+        <ResturantCard resData={restaurantList[0]} />
+        <ResturantCard resData={restaurantList[1]} />
+        <ResturantCard resData={restaurantList[2]} />
       </div>
     </div>
   );
