@@ -22,12 +22,16 @@
 .search {
   padding: 10px;
 }
-
+.res-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;  
+}
 .res-card {
+  margin:5px;
   padding: 5px;
   width: 200px;
-  height: 400px;
-
+  background-color: aliceblue;
 }
 
 .res-card:hover{

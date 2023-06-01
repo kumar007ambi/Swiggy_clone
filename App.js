@@ -1846,18 +1846,20 @@ const restaurantList = [
 const ResturantCard = (props) => {
   console.log(props);
   const { resData } = props;
+  //help of optional chaining
+  const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,deliveryTime}=resData?.data;
   return (
     <div className="res-card">
       <img
         className="res-logo"
         alt="res-logo"
-        src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+resData.data.cloudinaryImageId}
+        src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}
       />
-      <h1>{resData.data.name}</h1>
-      <h4>{resData.data.cuisines}</h4>
-      <h4>{resData.data.avgRating} Stars</h4>
-      <h4>{resData.data.costForTwo / 100} </h4>
-      <h4>{resData.data.deliveryTime}minutes</h4>
+      <h1>{name}</h1>
+      <h4>{cuisines.join(", ")}</h4>
+      <h4>{avgRating} Stars</h4>
+      <h4>{costForTwo / 100} </h4>
+      <h4>{deliveryTime}minutes</h4>
     </div>
   );
 };
@@ -1871,6 +1873,13 @@ const Body = () => {
         <ResturantCard resData={restaurantList[0]} />
         <ResturantCard resData={restaurantList[1]} />
         <ResturantCard resData={restaurantList[2]} />
+        <ResturantCard resData={restaurantList[3]} />
+        <ResturantCard resData={restaurantList[4]} />
+        <ResturantCard resData={restaurantList[5]} />
+        <ResturantCard resData={restaurantList[6]} />
+        <ResturantCard resData={restaurantList[7]} />
+        <ResturantCard resData={restaurantList[8]} />
+        <ResturantCard resData={restaurantList[9]} />
       </div>
     </div>
   );
