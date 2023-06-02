@@ -1870,16 +1870,11 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <ResturantCard resData={restaurantList[0]} />
-        <ResturantCard resData={restaurantList[1]} />
-        <ResturantCard resData={restaurantList[2]} />
-        <ResturantCard resData={restaurantList[3]} />
-        <ResturantCard resData={restaurantList[4]} />
-        <ResturantCard resData={restaurantList[5]} />
-        <ResturantCard resData={restaurantList[6]} />
-        <ResturantCard resData={restaurantList[7]} />
-        <ResturantCard resData={restaurantList[8]} />
-        <ResturantCard resData={restaurantList[9]} />
+       {
+         restaurantList.map((restuarant)=>(
+          <ResturantCard resData={restuarant}/>
+         ))
+       }
       </div>
     </div>
   );
