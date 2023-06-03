@@ -1844,7 +1844,7 @@ const restaurantList = [
 //ResturantCard
 //we can also desctructure the props name as({resname,cuisine})
 const ResturantCard = (props) => {
-  console.log(props);
+  //console.log(props);
   const { resData } = props;
   //help of optional chaining
   const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,deliveryTime}=resData?.data;
@@ -1872,7 +1872,7 @@ const Body = () => {
       <div className="res-container">
        {
          restaurantList.map((restuarant)=>(
-          <ResturantCard resData={restuarant}/>
+          <ResturantCard key={restuarant.data.id} resData={restuarant}/>
          ))
        }
       </div>
