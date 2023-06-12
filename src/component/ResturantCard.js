@@ -1,3 +1,4 @@
+import { CDN_URL } from "../utils/constant";
 //ResturantCard
 //we can also desctructure the props name as({resname,cuisine})
 const ResturantCard = (props) => {
@@ -10,7 +11,7 @@ const ResturantCard = (props) => {
         <img
           className="res-logo"
           alt="res-logo"
-          src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}
+          src={CDN_URL+cloudinaryImageId}
         />
         <h1>{name}</h1>
         <h4>{cuisines.join(", ")}</h4>
