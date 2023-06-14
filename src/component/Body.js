@@ -4,7 +4,9 @@ import restaurantList from "../utils/mockData";
 const Body = () => {
     return (
       <div className="body">
-        <div className="search">Search</div>
+        <div className="filter">
+          <button className="filter-btn" onClick={()=>{console.log("I am clicked")}}>Top Rated Resturants</button>
+        </div>
         <div className="res-container">
          {
            restaurantList.map((restuarant)=>(
