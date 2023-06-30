@@ -1,4 +1,5 @@
 import { CDN_URL } from "../utils/constant";
+import React from "react";
 //ResturantCard
 //we can also desctructure the props name as({resname,cuisine})
 const ResturantCard = (props) => {
