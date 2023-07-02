@@ -4,7 +4,14 @@ import restaurantList from "../utils/mockData";
 //Body
 const Body = () => {
   const [listOfRest, setListOfRest] = useState(restaurantList);
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
+  const fetchData=async()=>{
+     const data=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.6808046&lng=88.3757783&page_type=DESKTOP_WEB_LISTING");
+     const json=await data.json();
+     console.log(json);
+  }
   return (
     <div className="body">
       <div className="filter">
