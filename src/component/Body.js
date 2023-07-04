@@ -11,6 +11,11 @@ const Body = () => {
      const data=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.6808046&lng=88.3757783&page_type=DESKTOP_WEB_LISTING");
      const json=await data.json();
      console.log(json);
+     //optional chaining
+     setListOfRest(json?.data?.cards[2]?.data?.data?.cards)
+  }
+  if(listOfRest.length===0){
+    
   }
   return (
     <div className="body">
