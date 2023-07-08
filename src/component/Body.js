@@ -16,10 +16,10 @@ const Body = () => {
     //optional chaining
     setListOfRest(json?.data?.cards[2]?.data?.data?.cards);
   };
-  if (listOfRest.length === 0) {
-    return <Shimmer/>;
-  }
-  return (
+  //conditional rendering
+  return listOfRest.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <button
