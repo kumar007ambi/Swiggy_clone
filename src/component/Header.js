@@ -15,6 +15,7 @@ import { LOGO_URL } from "../utils/constant";
           <li>About Us</li>
           <li>Conatct Us</li>
           <li>Cart</li>
+          <button className="login">Login</button>
         </ul>
       </div>
     </div>

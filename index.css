@@ -58,3 +58,11 @@
   height: 400px;
   background-color: #f0f0f0;
 }
+.login{
+  margin: 10px 9px 10px 14px;
+  cursor: pointer;
+  width: 106px;
+  height: 53px;
+  border: 1px solid blue;
+  border-radius: 45px 45px 45px 45px;
+}
