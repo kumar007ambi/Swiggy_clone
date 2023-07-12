@@ -66,3 +66,6 @@
   border: 1px solid blue;
   border-radius: 45px 45px 45px 45px;
 }
+.filter{
+  display: flex;
+}

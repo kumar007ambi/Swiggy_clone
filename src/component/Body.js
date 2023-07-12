@@ -22,6 +22,12 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+           <input type="text" className="search-box"/>
+           <button onClick={()=>{
+            //filter the resturant card according to text and Updates the UI
+           }}>Search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
