@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ResturantCard from "./ResturantCard";
+import RestaurantCard from "./RestaurantCard";
 import restaurantList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { WEB_API } from "../utils/constant";
@@ -60,7 +60,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredResturant.map((restuarant) => (
-          <ResturantCard key={restuarant.data.id} resData={restuarant} />
+          <RestaurantCard key={restuarant.data.id} resData={restuarant} />
         ))}
       </div>
     </div>
