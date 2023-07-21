@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import  Shimmer from "../component/Shimmer"
 import { SWIGGY_MENU_URL } from "../utils/constant";
 const RestaurantMenu = () => {
+  const [resInfo, setResInfo] = useState(null);
   useEffect(() => {
     fetchMenu();
   }, []);
@@ -8,10 +10,13 @@ const RestaurantMenu = () => {
     const data = await fetch(SWIGGY_MENU_URL);
     const json = await data.json();
     console.log(json);
+    setResInfo(json.data);
   };
-  return (
+  return resInfo === null ? (
+    <Shimmer />
+  ) : (
     <div className="menu">
-      <h1>Name of the Restaurant</h1>
+      <h1>{resInfo?.cards[0]?.card?.card?.info?.name}</h1>
       <h2>Menu</h2>
       <ul>
         <li>Biryani</li>
