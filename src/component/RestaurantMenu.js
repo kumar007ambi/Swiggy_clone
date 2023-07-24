@@ -3,7 +3,6 @@ import Shimmer from "../component/Shimmer";
 import { SWIGGY_MENU_URL } from "../utils/constant";
 
 const RestaurantMenu = () => {
-
   const [resInfo, setResInfo] = useState(null);
   useEffect(() => {
     fetchMenu();
@@ -15,22 +14,28 @@ const RestaurantMenu = () => {
     console.log(json);
     setResInfo(json.data);
   };
-if(resInfo === null) return ( <Shimmer />)
+  if (resInfo === null) return <Shimmer />;
 
-const {name,cuisines,costForTwoMessage}=resInfo?.cards[0]?.card?.card?.info;
-const {itemCards}=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-console.log(itemCards)
+  const { name, cuisines, costForTwoMessage } =
+    resInfo?.cards[0]?.card?.card?.info;
+  const { itemCards } =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+  console.log(itemCards);
 
-  return  (
+  return (
     <div className="menu">
       <h1>{name}</h1>
-      <h3>{cuisines.join(',')} - {costForTwoMessage}</h3>
-     
+      <h3>
+        {cuisines.join(",")} - {costForTwoMessage}
+      </h3>
+
       <ul>
-        <li>Biryani</li>
-        <li>Burger</li>
-        <li>Diet Coke</li>
-        <li>Fries</li>
+        {itemCards.map((item) => (
+          <li>
+            {item.card.info.name} -{" Rs. "}{" "}
+            {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
+          </li>
+        ))}
       </ul>
     </div>
   );
