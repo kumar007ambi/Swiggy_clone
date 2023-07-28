@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <h1>About</h1>
-      <div><User name={"Ambika Kumar Kewat(function)"}/></div>
+      {/* <div><User name={"Ambika Kumar Kewat(function)"}/></div> */}
       <div><UserClass name={"Ambika Kumar Kewat(class)"}/></div>
     </div>
   );
