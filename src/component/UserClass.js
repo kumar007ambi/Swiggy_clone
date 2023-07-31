@@ -8,14 +8,14 @@ class UserClass extends React.Component {
     };
   }
 
-  componentDidMount(){
-    console.log("child component did mount called")
+  componentDidMount() {
+    console.log("child component did mount called");
   }
 
   render() {
     const { name } = this.props;
-    const { count} = this.state;
-   
+    const { count } = this.state;
+
     return (
       <div className="user-card">
         <h3>Count : {count}</h3>
@@ -37,5 +37,12 @@ class UserClass extends React.Component {
     );
   }
 }
+
+// Parent constrcutor
+// parent render
+// child constructor
+// child render
+// child componentDidMount
+// parnet componentDidMount
 
 export default UserClass;
