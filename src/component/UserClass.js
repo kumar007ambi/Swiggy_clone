@@ -37,12 +37,13 @@ class UserClass extends React.Component {
     );
   }
 }
-
-// Parent constrcutor
-// parent render
-// child constructor
-// child render
-// child componentDidMount
-// parnet componentDidMount
+/*
+Parent constrcutor
+parent render
+child constructor
+child render
+child componentDidMount
+parnet componentDidMount
+*/
 
 export default UserClass;
