@@ -20,7 +20,7 @@ const Body = () => {
     setFilteredRestuarnt(json?.data?.cards[2]?.data?.data?.cards)
   };
   //conditional rendering
-  return listOfRest?.length === 0 ? (
+  return listOfRest.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
