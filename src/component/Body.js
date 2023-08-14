@@ -16,8 +16,9 @@ const Body = () => {
     const data = await fetch(WEB_API);
     const json = await data.json();
     //optional chaining
-    setListOfRest(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestuarnt(json?.data?.cards[2]?.data?.data?.cards)
+    setListOfRest(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    console.log( setListOfRest(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants))
+    setFilteredRestuarnt(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   };
   //conditional rendering
   return listOfRest.length === 0 ? (
