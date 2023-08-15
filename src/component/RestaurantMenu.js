@@ -4,19 +4,22 @@ import Shimmer from "../component/Shimmer";
 import { SWIGGY_MENU_URL } from "../utils/constant";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
+  //const [resInfo, setResInfo] = useState(null);
   const { resId } = useParams();
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  //custom hooks
+  const resInfo=useRestaurantMenu(resId)
 
-  const fetchMenu = async () => {
-    const data = await fetch(SWIGGY_MENU_URL + resId);
-    const json = await data.json();
-    console.log(json);
-    setResInfo(json.data);
-  };
+  // useEffect(() => {
+  //   fetchMenu();
+  // }, []);
+
+  // const fetchMenu = async () => {
+  //   const data = await fetch(SWIGGY_MENU_URL + resId);
+  //   const json = await data.json();
+  //   console.log(json);
+  //   setResInfo(json.data);
+  // };
   if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =

@@ -6,7 +6,7 @@ const ResturantCard = (props) => {
     //console.log(props);
     const { resData } = props;
     //help of optional chaining
-    const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,deliveryTime}=resData?.data;
+    const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,deliveryTime}=resData?.info;
     return (
       <div className="res-card">
         <img
