@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Shimmer from "../component/Shimmer";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { SWIGGY_MENU_URL } from "../utils/constant";
 
 const RestaurantMenu = () => {
@@ -8,7 +9,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   //custom hooks
-  const resInfo=useRestaurantMenu(resId)
+  const resInfo = useRestaurantMenu(resId);
 
   // useEffect(() => {
   //   fetchMenu();
