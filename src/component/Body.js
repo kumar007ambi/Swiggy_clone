@@ -4,11 +4,12 @@ import RestaurantCard from "./RestaurantCard";
 import restaurantList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { WEB_API } from "../utils/constant";
+import useOnlineStatus from "../utils/useOnlineStatus";
 //Body
 const Body = () => {
   const [listOfRest, setListOfRest] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [filteredResturant,setFilteredRestuarnt]=useState([]);
+  const [filteredResturant, setFilteredRestuarnt] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
@@ -16,10 +17,22 @@ const Body = () => {
     const data = await fetch(WEB_API);
     const json = await data.json();
     //optional chaining
-    setListOfRest(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    console.log( setListOfRest(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants))
-    setFilteredRestuarnt(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setListOfRest(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    //console.log( setListOfRest(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants))
+    setFilteredRestuarnt(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
+
+  const onlineStatus = useOnlineStatus();
+  
+  if (onlineStatus === false)
+    return (
+      <h1>Looks like you are offline!!Please check your internet connection</h1>
+    );
+
   //conditional rendering
   return listOfRest.length === 0 ? (
     <Shimmer />
@@ -62,7 +75,12 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredResturant.map((restuarant) => (
-          <Link key={restuarant.info.id} to={"/restaurants/"+restuarant.info.id}><RestaurantCard  resData={restuarant} /></Link>
+          <Link
+            key={restuarant.info.id}
+            to={"/restaurants/" + restuarant.info.id}
+          >
+            <RestaurantCard resData={restuarant} />
+          </Link>
         ))}
       </div>
     </div>
