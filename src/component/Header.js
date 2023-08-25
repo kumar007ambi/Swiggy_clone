@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className="flex">
-      <div className="logo-container">
+      <div className="container">
         <img className="w-56" src={LOGO_URL} />
       </div>
       <div className="nav-item">
