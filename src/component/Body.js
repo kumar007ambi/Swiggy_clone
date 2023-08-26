@@ -39,10 +39,10 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter">
-        <div className="search">
+        <div className="search p-4 m-4 ">
           <input
             type="text"
-            className="search-box"
+            className="search-box border"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
