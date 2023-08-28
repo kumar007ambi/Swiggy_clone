@@ -27,7 +27,7 @@ const Body = () => {
   };
 
   const onlineStatus = useOnlineStatus();
-  
+
   if (onlineStatus === false)
     return (
       <h1>Looks like you are offline!!Please check your internet connection</h1>
@@ -38,17 +38,18 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
+      <div className="filter flex">
         <div className="search p-4 m-4 ">
           <input
             type="text"
-            className="search-box border"
+            className="border border-solid border-black rounded"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
+            className="px-3 py-0.5 bg-blue-400 m-3 rounded"
             onClick={() => {
               //filter the resturant card according to text and Updates the UI
               console.log(searchText);
@@ -61,17 +62,19 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = listOfRest.filter(
-              (res) => res.data.avgRating > 4
-            );
-            setListOfRest(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        <div className="search p-4 m-4 ">
+          <button
+            className="px-3 py-0.5 bg-green-400 m-3 rounded"
+            onClick={() => {
+              const filteredList = listOfRest.filter(
+                (res) => res.data.avgRating > 4
+              );
+              setListOfRest(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
       <div className="res-container">
         {filteredResturant.map((restuarant) => (
