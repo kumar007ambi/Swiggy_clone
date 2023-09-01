@@ -13,7 +13,7 @@ const User = ({ name }) => {
   //   };
   // }, []);
   return (
-    <div className="user-card">
+    <div className="user-card bg-zinc-100 rounded">
       <h3>Count : {count}</h3>
       <h2>Name : {name}</h2>
       <h3>Location : Kolkata</h3>
