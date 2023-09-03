@@ -24,6 +24,7 @@ const Body = () => {
     setFilteredRestuarnt(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    console.log(setListOfRest)
   };
 
   const onlineStatus = useOnlineStatus();
