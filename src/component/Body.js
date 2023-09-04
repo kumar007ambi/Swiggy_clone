@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import restaurantList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { WEB_API } from "../utils/constant";
@@ -10,6 +10,8 @@ const Body = () => {
   const [listOfRest, setListOfRest] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredResturant, setFilteredRestuarnt] = useState([]);
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -18,13 +20,12 @@ const Body = () => {
     const json = await data.json();
     //optional chaining
     setListOfRest(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     //console.log( setListOfRest(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants))
     setFilteredRestuarnt(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(setListOfRest)
   };
 
   const onlineStatus = useOnlineStatus();
@@ -83,7 +84,11 @@ const Body = () => {
             key={restuarant.info.id}
             to={"/restaurants/" + restuarant.info.id}
           >
-            <RestaurantCard resData={restuarant} />
+            {restuarant.data.promoted ? (
+              <RestaurantCardPromoted resData={restuarant} />
+            ) : (
+              <RestaurantCard resData={restuarant} />
+            )}
           </Link>
         ))}
       </div>
