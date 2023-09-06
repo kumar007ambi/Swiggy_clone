@@ -15,7 +15,7 @@ class UserClass extends React.Component {
   async componentDidMount() {
     const data = await fetch(GITHUBAPI);
     const json = await data.json();
-    //console.log(json);
+   
     this.setState({
       userInfo: json,
     });
