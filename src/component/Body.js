@@ -20,11 +20,11 @@ const Body = () => {
     const json = await data.json();
     //optional chaining
     setListOfRest(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     //console.log( setListOfRest(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants))
     setFilteredRestuarnt(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -84,7 +84,7 @@ const Body = () => {
             key={restuarant.info.id}
             to={"/restaurants/" + restuarant.info.id}
           >
-            {restuarant.data.promoted ? (
+            {restuarant.info.isOpen ? (
               <RestaurantCardPromoted resData={restuarant} />
             ) : (
               <RestaurantCard resData={restuarant} />
