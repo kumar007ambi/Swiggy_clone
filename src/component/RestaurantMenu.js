@@ -30,7 +30,7 @@ const RestaurantMenu = () => {
   //console.log(itemCards);
 
   return (
-    <div className="menu">
+    <div className="menu bg-slate-100">
       <h1>{name}</h1>
       <h3>
         {cuisines.join(",")} - {costForTwoMessage}
