@@ -20,11 +20,11 @@ const Body = () => {
     const json = await data.json();
     //optional chaining
     setListOfRest(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log( setListOfRest(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants))
+    //console.log( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredRestuarnt(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -56,7 +56,7 @@ const Body = () => {
               //filter the resturant card according to text and Updates the UI
               console.log(searchText);
               const filteredResturant = listOfRest.filter((res) =>
-                res.data.name.toLowerCase().includes(searchText.toLowerCase())
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setFilteredRestuarnt(filteredResturant);
             }}
