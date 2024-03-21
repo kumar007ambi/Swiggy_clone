@@ -5,6 +5,7 @@ import restaurantList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { WEB_API } from "../utils/constant";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import useRestaurantList from "../utils/useRestaurantList";
 //Body
 const Body = () => {
   const [listOfRest, setListOfRest] = useState([]);
@@ -27,6 +28,8 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  const customHook=useRestaurantList(WEB_API)
 
   const onlineStatus = useOnlineStatus();
 
