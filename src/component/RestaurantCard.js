@@ -32,7 +32,7 @@ const ResturantCard = (props) => {
   };
 //Higher order Component
 //Higher order Component
-export const withPromotedLabel = (RestaurantCard) => {
+export const openResturantLabel = (RestaurantCard) => {
   return (props) => {
     return (
       <div>

@@ -3,13 +3,16 @@ import { useParams } from "react-router-dom";
 import Shimmer from "../component/Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { SWIGGY_MENU_URL } from "../utils/constant";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   //const [resInfo, setResInfo] = useState(null);
   const { resId } = useParams();
-
+  const [showIndex, setShowIndex] = useState(null);
   //custom hooks
   const resInfo = useRestaurantMenu(resId);
+
+  
 
   // useEffect(() => {
   //   fetchMenu();
@@ -27,23 +30,32 @@ const RestaurantMenu = () => {
     resInfo?.cards[0]?.card?.card?.info;
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-  //console.log(itemCards);
+
+  //console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
+  const categories =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.["card"]?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+  //console.log(categories);
 
   return (
-    <div className="menu bg-slate-100">
-      <h1>{name}</h1>
-      <h3>
+    <div className="text-center">
+      <h1 className="font-bold my-6 text-2xl">{name}</h1>
+      <p className="font-bold text-lg">
         {cuisines.join(",")} - {costForTwoMessage}
-      </h3>
-
-      <ul>
-        {itemCards.map((item) => (
-          <li key={item.card.info.id}>
-            😋{item.card.info.name} -{" Rs. "}{" "}
-            💰{item.card.info.price / 100 || item.card.info.defaultPrice / 100}
-          </li>
-        ))}
-      </ul>
+      </p>
+      {/* controlled components */}
+      {/* categories accordions  */}
+      {categories.map((category,index) => (
+        <RestaurantCategory
+          key={category?.card?.card.title}
+          data={category?.card?.card}
+          showItems={index === showIndex ? true : false}
+          setShowIndex={() => setShowIndex(index)}
+        />
+      ))}
     </div>
   );
 };
