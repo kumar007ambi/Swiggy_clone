@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({ data ,showItems, setShowIndex}) => {
+const RestaurantCategory = ({ data ,showItems, setShowIndex,dummy}) => {
   //const [showItems, setShowItesm] = useState(false);
   //console.log(data)
   //accordian open close logic
@@ -22,7 +22,7 @@ const RestaurantCategory = ({ data ,showItems, setShowIndex}) => {
           <span>⬇️</span>
         </div>
 
-        {showItems && <ItemList items={data.itemCards} />}
+        {showItems && <ItemList items={data.itemCards}  dummy={dummy}/>}
       </div>
     </div>
   );

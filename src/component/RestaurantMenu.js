@@ -12,7 +12,7 @@ const RestaurantMenu = () => {
   //custom hooks
   const resInfo = useRestaurantMenu(resId);
 
-  
+  const dummy = "Dummy Data";
 
   // useEffect(() => {
   //   fetchMenu();
@@ -54,6 +54,7 @@ const RestaurantMenu = () => {
           data={category?.card?.card}
           showItems={index === showIndex ? true : false}
           setShowIndex={() => setShowIndex(index)}
+           dummy={dummy}
         />
       ))}
     </div>

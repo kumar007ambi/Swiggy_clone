@@ -7,6 +7,8 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import RestaurantMenu from "./component/RestaurantMenu";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 // import Grocery from "./component/Grocery";
 
 //chunking
@@ -19,18 +21,20 @@ const Grocery = lazy(() => import("./component/Grocery"));
 
 const AppLayout = () => {
   return (
-    <div className="app">
-      <Header />
-      {/* Outlet renders will fill the children routes */}
-      <Outlet />
-      {/* In this manner routes are rendered */}
-      {/* If the path is / */}
-      {/* <Body /> */}
-      {/* If the path is /about */}
-      {/* <About /> */}
-      {/* If the path is /contact */}
-      {/* <Contact /> */}
-    </div>
+    <Provider store={appStore}>
+      <div className="app">
+        <Header />
+        {/* Outlet renders will fill the children routes */}
+        <Outlet />
+        {/* In this manner routes are rendered */}
+        {/* If the path is / */}
+        {/* <Body /> */}
+        {/* If the path is /about */}
+        {/* <About /> */}
+        {/* If the path is /contact */}
+        {/* <Contact /> */}
+      </div>
+    </Provider>
   );
 };
 
