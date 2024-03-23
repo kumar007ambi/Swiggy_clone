@@ -25,3 +25,12 @@ Namste Raect 🚀
  (Normal JS utility Functions)
  - useState() - SuperPowerfull State Variable in React
  - useEffect()
+
+
+  # Redux Toolkit
+  - Install @reduxjs/toolkit and react-redux
+  - Build our store
+  - Connect our store to our app
+  - Slice (cartSlice)
+  - dispatch(action)
+  - Selector
