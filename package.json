@@ -24,7 +24,12 @@
   },
   "homepage": "https://github.com/kumar007ambi/Namste_React#readme",
   "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@testing-library/react": "^14.2.2",
     "@types/react": "^18.2.20",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
     "parcel": "^2.8.3",
     "postcss": "^8.4.28",
     "process": "^0.11.10",
