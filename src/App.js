@@ -9,6 +9,7 @@ import Error from "./component/Error";
 import RestaurantMenu from "./component/RestaurantMenu";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Cart from "./component/Cart"
 // import Grocery from "./component/Grocery";
 
 //chunking
@@ -66,6 +67,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
