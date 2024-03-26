@@ -2,7 +2,7 @@ import { CDN_URL } from "../utils/constant";
 import React from "react";
 //ResturantCard
 //we can also desctructure the props name as({resname,cuisine})
-const ResturantCard = (props) => {
+const RestaurantCard = (props) => {
     //console.log(props);
     const { resData } = props;
     const { deliveryTime } = resData?.info?.sla;
@@ -43,4 +43,4 @@ export const openResturantLabel = (RestaurantCard) => {
   };
 };
 
-export default ResturantCard;
+export default RestaurantCard;
