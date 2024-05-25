@@ -36,7 +36,7 @@ Namste Raect 🚀
   - Selector
 
 
-  # Types of testing (devloper)
+  # Types of testing (developer)
  - Unit Testing
  - Integration Testing
  - End to End Testing - e2e testing
