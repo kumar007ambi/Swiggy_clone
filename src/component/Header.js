@@ -17,9 +17,9 @@ const Header = () => {
   //console.log(cartItems);
 
   return (
-    <div className="flex justify-between bg-slate-400">
+    <div className="flex justify-between bg-slate-400 h-24">
       <div className="logo-container">
-        <img className="w-56" src={LOGO_URL} />
+        <img className="w-[101px]" src={LOGO_URL} />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">

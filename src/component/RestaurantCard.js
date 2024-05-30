@@ -16,31 +16,30 @@ const RestaurantCard = (props) => {
     } = resData?.info;
 
     return (
-      <div data-testid="resCard" className="m-4 p-4 w-[350px] bg-slate-300">
+      <div data-testid="resCard" className="m-4 p-1 w-[285px] h-[278px] rounded-lg bg-cover">
         <img
-          className="rounded "
+          className="rounded w-[90%] h-[55%] bg-auto "
           alt="res-logo"
           src={CDN_URL + cloudinaryImageId}
         />
-        <h1>😋{name}</h1>
-        <h4>{cuisines.join(", ")}</h4>
-        <h4 > ⭐{avgRating} Stars</h4>
-        <h4>💰{costForTwo} </h4>
-        <h4>🚚{deliveryTime}minutes</h4>
+        <h1>{name}</h1>
+        {/* <h4>{cuisines.join(", ")}</h4> */}
+        <h4 >⭐{avgRating}. {deliveryTime}</h4>
+        <h4>{costForTwo} </h4>
       </div>
     );
   };
 //Higher order Component
 //Higher order Component
-export const openResturantLabel = (RestaurantCard) => {
-  return (props) => {
-    return (
-      <div>
-        <label className="absolute bg-black text-white m-2 p-2 rounded-md">Open</label>
-        <RestaurantCard {...props}/>
-      </div>
-    );
-  };
-};
+// export const openResturantLabel = (RestaurantCard) => {
+//   return (props) => {
+//     return (
+//       <div>
+//         <label className="absolute bg-black text-white m-2 p-2 rounded-md">Open</label>
+//         <RestaurantCard {...props}/>
+//       </div>
+//     );
+//   };
+// };
 
 export default RestaurantCard;
