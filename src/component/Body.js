@@ -12,7 +12,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredResturant, setFilteredRestuarnt] = useState([]);
   //HOC
-  const OpenRestaurant = openResturantLabel(RestaurantCard);
+  // const OpenRestaurant = openResturantLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -24,7 +24,7 @@ const Body = () => {
     setListOfRest(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    //console.log( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    console.log( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredRestuarnt(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -90,11 +90,11 @@ const Body = () => {
             key={restuarant.info.id}
             to={"/restaurants/" + restuarant.info.id}
           >
-            {restuarant.info.isOpen ? (
+            {/* {restuarant.info.isOpen ? (
               <OpenRestaurant resData={restuarant} />
-            ) : (
+            ) : ( */}
               <RestaurantCard resData={restuarant} />
-            )}
+            {/* )} */}
           </Link>
         ))}
       </div>
