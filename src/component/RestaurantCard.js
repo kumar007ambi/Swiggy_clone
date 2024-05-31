@@ -18,7 +18,7 @@ const RestaurantCard = (props) => {
     return (
       <div data-testid="resCard" className="m-4 p-1 w-[285px] h-[278px] rounded-lg bg-cover">
         <img
-          className="rounded w-[90%] h-[55%] bg-auto "
+          className="rounded w-[90%] h-[55%] "
           alt="res-logo"
           src={CDN_URL + cloudinaryImageId}
         />
