@@ -9,7 +9,8 @@ const RestaurantCard = (props) => {
   const { resData } = props;
   const { deliveryTime } = resData?.info?.sla;
   //help of optional chaining
-  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
+  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo,locality
+ } =
     resData?.info;
 
   return (
@@ -43,10 +44,12 @@ const RestaurantCard = (props) => {
             </h4>
           </div>
         </div>
-        {/* <div>
-          {" "}
-          <h4>{cuisines}</h4>
-        </div> */}
+        <div className="">
+          <h4>{cuisines.join(", ").substring(0,30)+"..."}</h4>
+        </div>
+        <div>
+        <h4>{locality.substring(0,20)+"..."}</h4>
+        </div>
         {/* <h4>{cuisines.join(", ")}</h4> */}
 
         {/* <h4>{costForTwo} </h4> */}
