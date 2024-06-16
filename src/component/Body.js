@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer";
 import { WEB_API } from "../utils/constant";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurantList from "../utils/useRestaurantList";
+import SecondHeader from "./SecondHeader";
 //Body
 const Body = () => {
   const [listOfRest, setListOfRest] = useState([]);
@@ -45,6 +46,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
+    <SecondHeader/>
       <div className="filter flex">
         <div className="search p-4 m-4 ">
           <input
