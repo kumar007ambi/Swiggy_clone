@@ -7,7 +7,7 @@ const SecondHeader = () => {
         <div><h2>subheader1</h2></div>
         <div><h2>subheader2</h2></div>
       </div>
-      <h1>SecondHeader</h1>
+      <div><h1>SecondHeader</h1></div>
     </div>
   )
 }
