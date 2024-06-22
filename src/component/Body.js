@@ -45,9 +45,9 @@ const Body = () => {
   return listOfRest.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
+    <div className="body mx-[180px]">
     <SecondHeader/>
-      <div className="filter flex">
+      {/* <div className="filter flex">
         <div className="search p-4 m-4 ">
           <input
             type="text"
@@ -85,7 +85,7 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-wrap">
         {filteredResturant.map((restuarant) => (
           <Link
