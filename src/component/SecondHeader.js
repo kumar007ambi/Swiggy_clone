@@ -4,10 +4,19 @@ const SecondHeader = () => {
   return (
     <div>
       <div>
-        <div><h2>subheader1</h2></div>
-        <div><h2>subheader2</h2></div>
+        <div className='float-right m-2'>
+          <button>
+            <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' />
+          </button>
+          <span>{"  "}</span>
+        
+          <button>
+            <img src={require("../assets/svgImages/right.svg")} className='h-6 w-6' alt='letf Button' />
+          </button>
+        </div>
+        <div><h2 className='text-[24px] font-bold te'>What's on your mind?</h2></div>
       </div>
-      <div><h1>SecondHeader</h1></div>
+      
     </div>
   )
 }
