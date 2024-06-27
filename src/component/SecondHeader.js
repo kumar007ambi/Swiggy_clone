@@ -6,7 +6,7 @@ const SecondHeader = () => {
   return (
     <div>
       <div>
-        <div className='float-right m-3'>
+        <div className='float-right m-2'>
           <button>
             <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' />
           </button>
