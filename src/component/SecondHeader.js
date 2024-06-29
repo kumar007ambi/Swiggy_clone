@@ -6,7 +6,7 @@ const SecondHeader = () => {
   return (
     <div>
       <div>
-        <div className='float-right m-3'>
+        <div className='float-right m-2'>
           <button>
             <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' />
           </button>
@@ -35,7 +35,7 @@ const SecondHeader = () => {
                             <Slider>
                                 <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                     <Slide index={0}>
-                                        <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                                        <div className="flex flex-shrink-0 relative w-[180px] h-[184px] sm:w-auto">
                                             <img src="https://i.ibb.co/fDngH9G/carosel-1.png" alt="black chair and white table" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
