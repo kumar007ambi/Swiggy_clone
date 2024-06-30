@@ -12,6 +12,7 @@ const Body = () => {
   const [listOfRest, setListOfRest] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredResturant, setFilteredRestuarnt] = useState([]);
+  const [allData,setAllData]=useState([]);
   //HOC
   // const OpenRestaurant = openResturantLabel(RestaurantCard);
 
@@ -22,6 +23,7 @@ const Body = () => {
     const data = await fetch(WEB_API);
     const json = await data.json();
     //optional chaining
+    setAllData(json);
     setListOfRest(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -46,7 +48,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body mx-[180px]">
-    <SecondHeader/>
+    <SecondHeader data={allData}/>
       {/* <div className="filter flex">
         <div className="search p-4 m-4 ">
           <input
