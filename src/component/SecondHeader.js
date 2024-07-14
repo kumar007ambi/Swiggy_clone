@@ -9,7 +9,7 @@ const SecondHeader = (props) => {
     return (
         <div>
             <div>
-                <div className='float-right m-3'>
+                <div className='float-right m-2'>
                     <button>
                         <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' />
                     </button>
@@ -35,21 +35,22 @@ const SecondHeader = (props) => {
                             </svg>
                         </ButtonBack> */}
                                 <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                    {headerData?.map((data) => {
+                                    {/* {headerData?.map((data) => {
                                         return (
-                                       <p>{data?.id}</p>
-                                        // <Slider>
-                                        //     <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
-                                        //         <Slide index={0}>
-                                        //             <div className="flex flex-shrink-0 relative w-[180px] h-[184px] sm:w-auto">
-                                        //                 <div className="  absolute w-[144px] h-[180px] p-6">
-                                        //                     <img src="https://i.ibb.co/fDngH9G/carosel-1.png" alt="black chair and white table" className="object-cover object-center w-full" />
-                                        //                 </div>
-                                        //             </div>
-                                        //         </Slide>
-                                        //     </div>
-                                        // </Slider>
-                                    )})}
+                                             */}
+                                          
+                                        <Slider >
+                                            <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+                                                <Slide index={0}>
+                                                    <div className="flex flex-shrink-0 relative w-[180px] h-[184px] sm:w-auto">
+                                                        <div className="  absolute w-[144px] h-[180px] p-6">
+                                                            <img src="https://i.ibb.co/fDngH9G/carosel-1.png" alt="black chair and white table" className="object-cover object-center w-full" />
+                                                        </div>
+                                                    </div>
+                                                </Slide>
+                                            </div>
+                                        </Slider>
+                                    {/* )})} */}
                                 </div>
                                 {/* <ButtonNext role="button" aria-label="slide forward" className="absolute z-30 right-0 mr-8 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" id="next">
                             <svg width={8} height={14} viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
