@@ -23,11 +23,12 @@ const Body = () => {
     const data = await fetch(WEB_API);
     const json = await data.json();
     //optional chaining
-    setAllData(json);
+    setAllData(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
+    // console.log("body",json?.data?.cards[0]?.card?.card?.imageGridCards?.info)
     setListOfRest(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    // console.log( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredRestuarnt(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );

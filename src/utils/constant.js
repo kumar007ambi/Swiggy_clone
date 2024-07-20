@@ -5,3 +5,4 @@ export const WEB_API="https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.518
 export const SWIGGY_MENU_URL =
 "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.6808046&lng=88.3757783&restaurantId=";
 export const GITHUBAPI="https://api.github.com/users/kumar007ambi"
+export const SUBHEADERURLLINK="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/"
