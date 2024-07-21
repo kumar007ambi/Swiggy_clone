@@ -48,7 +48,7 @@ const RestaurantCard = (props) => {
           <h4>{cuisines.join(", ").substring(0,30)+"..."}</h4>
         </div>
         <div>
-        <h4>{locality.substring(0,20)+"..."}</h4>
+        {/* <h4>{locality.substring(0,20)+"..."}</h4> */}
         </div>
       
       </div>
