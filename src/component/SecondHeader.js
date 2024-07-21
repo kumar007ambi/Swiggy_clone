@@ -29,19 +29,22 @@ const SecondHeader = (allData) => {
                         <CarouselProvider className="lg:block hidden" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={12} visibleSlides={4} step={1} infinite={true}>
                             <div className="w-full relative flex items-center justify-center">
                                 <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                    {allData?.data?.map((data,index) => {
+                                    {allData?.data?.map((item,index) => {
                                         // return (
-                                            <Slider key={index}>
-                                                <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
-                                                    <Slide index={0}>
-                                                        <div className="flex flex-shrink-0 relative w-[180px] h-[184px] sm:w-auto">
-                                                            <div className="  absolute w-[144px] h-[180px] p-6">
-                                                                <img src={SUBHEADERURLLINK + data?.imageId} alt="black chair and white table" className="object-cover object-center w-full" /> 
-                                                            </div>
-                                                        </div>
-                                                    </Slide>
-                                                </div>
-                                            </Slider>
+                                            // <Slider key={index}>
+                                            //     <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+                                            //         <Slide index={0}>
+                                            //             <div className="flex flex-shrink-0 relative w-[180px] h-[184px] sm:w-auto">
+                                            //                 <div className="  absolute w-[144px] h-[180px] p-6">
+                                                                 <>
+                                                                <img src={SUBHEADERURLLINK+item?.imageId} alt="Banner Pic" className="object-cover object-center w-full" /> 
+                                                                 {/* <p>{item?.description}</p>  */}
+                                                                 </>
+                                            //                 </div>
+                                            //             </div>
+                                            //         </Slide>
+                                            //     </div>
+                                            // </Slider>
                                     
                                      })} 
                                    
