@@ -7,6 +7,7 @@ import { WEB_API } from "../utils/constant";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurantList from "../utils/useRestaurantList";
 import SecondHeader from "./SecondHeader";
+import Banner from "./Banner"
 //Body
 const Body = () => {
   const [listOfRest, setListOfRest] = useState([]);
@@ -49,6 +50,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body mx-[180px]">
+    <Banner/>
     <SecondHeader data={allData}/>
       {/* <div className="filter flex">
         <div className="search p-4 m-4 ">

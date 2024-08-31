@@ -2011,3 +2011,26 @@ export const foodCategoryMap = {
     cards: []
   },
 }
+
+export const bannerList = [
+    {
+        id: 101,
+        imgUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/8c86a9b3703a3c7c3fad66b810a6c9f0"
+    },
+    {
+        id: 102,
+        imgUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/f9802f222bff4ee205fc8bf9bc842995"
+    },
+    {
+        id: 103,
+        imgUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/1332882db644e6ede2b91e4fd1907ba2"
+    },
+    {
+        id: 104,
+        imgUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/e0b0a61e42290317661f60a4e6ee537f"
+    },
+    {
+        id: 105,
+        imgUrl: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/5ebff1366e7089dd4a2ad7c9433b8067"
+    }
+]
