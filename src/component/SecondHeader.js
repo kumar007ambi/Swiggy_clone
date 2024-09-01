@@ -7,8 +7,6 @@ const SecondHeader = (allData) => {
     console.log("second header", allData)
     return (
         <>
-
-
             <div className="h-[256px]">
                 <h1 className="font-bold text-2xl mb-2">What's on your mind?</h1>
 

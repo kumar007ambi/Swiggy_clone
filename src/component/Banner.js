@@ -2,9 +2,8 @@ import { bannerList } from "../utils/mockData"
 
 const Banner = () => {
   return (
-    <div className="h-[344px] p-2">
+    <div className="h-[344px] p-3">
         <h1 className="mt-5 font-bold text-2xl mb-2">Best offers for you</h1>
-
         <div>
             <div>
                 <div className="flex overflow-scroll no-scrollbar">
@@ -23,3 +22,5 @@ const Banner = () => {
     </div>
   )
 }
+
+export default Banner;
