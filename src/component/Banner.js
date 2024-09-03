@@ -7,6 +7,7 @@ const Banner = () => {
 
     // Handle scrolling
     const handleScroll = (direction) => {
+        console.log("i am scrolled")
         const scrollAmount = 100; // Amount to scroll by (adjust as needed)
         const newScrollPosition =
             direction === 'left' ? scrollPosition - scrollAmount : scrollPosition + scrollAmount;
@@ -21,16 +22,18 @@ const Banner = () => {
     return (
         <div className="h-[344px] p-3">
             <button onClick={() => handleScroll('left')}>
-                <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' />
+                <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' onClick={() => handleScroll('left')} />
             </button>
             <span>{"  "}</span>
             <button onClick={() => handleScroll('right')}>
-                <img src={require("../assets/svgImages/right.svg")} className='h-6 w-6' alt='right Button' />
+                <img src={require("../assets/svgImages/right.svg")} className='h-6 w-6' alt='right Button' onClick={() => handleScroll('right')} />
             </button>
+
             <h1 className="mt-5 font-bold text-2xl mb-2">Best offers for you</h1>
-            <div>
-                <div>
-                    <div className="flex overflow-scroll no-scrollbar">
+            {/* <div className="scroll-content" ref={scrollRef}> */}
+            <div >
+                <div className="scroll-content" ref={scrollRef}>
+                    <div className="flex overflow-scroll no-scrollbar" ref={scrollRef}>
                         {bannerList.map((banner) => (
                             <img
                                 key={banner.id}
@@ -44,6 +47,7 @@ const Banner = () => {
                 </div>
             </div>
         </div>
+        // </div>
     )
 }
 
