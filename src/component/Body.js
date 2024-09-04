@@ -50,8 +50,9 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body mx-[180px]">
-    <Banner/>
+    
     <SecondHeader data={allData}/>
+    <Banner/>
       {/* <div className="filter flex">
         <div className="search p-4 m-4 ">
           <input

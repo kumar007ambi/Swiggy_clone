@@ -47,7 +47,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
-    "react-router-dom": "^6.14.1"
+    "react-router-dom": "^6.14.1",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "browserslist": [
     "last 2 version"
