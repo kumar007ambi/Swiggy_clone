@@ -37,11 +37,11 @@ const Banner = () => {
     return (
         <div className="h-[344px] p-3">
             <button onClick={scrollLeft}>
-                <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' />
+                <img src={require("../assets/svgImages/reshot-icon-arrow-left.svg")} className='h-6 w-6' alt='letf Button' />
             </button>
             <span>{"  "}</span>
             <button onClick={scrollRight}>
-                <img src={require("../assets/svgImages/right.svg")} className='h-6 w-6' alt='right Button' />
+                <img src={require("../assets/svgImages/reshot-icon-arrow-right.svg")} className='h-6 w-6' alt='right Button' />
             </button>
 
             <h1 className="mt-5 font-bold text-2xl mb-2">Best offers for you</h1>

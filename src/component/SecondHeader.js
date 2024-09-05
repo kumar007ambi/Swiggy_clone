@@ -25,11 +25,11 @@ const SecondHeader = (allData) => {
         <>
             <div className="h-[256px]">
             <button onClick={scrollLeft}>
-                <img src={require("../assets/svgImages/left.svg")} className='h-6 w-6' alt='letf Button' />
+                <img src={require("../assets/svgImages/reshot-icon-arrow-left.svg")} className='h-6 w-6' alt='letf Button' />
             </button>
             <span>{"  "}</span>
             <button onClick={scrollRight}>
-                <img src={require("../assets/svgImages/right.svg")} className='h-6 w-6' alt='right Button' />
+                <img src={require("../assets/svgImages/reshot-icon-arrow-right.svg")} className='h-6 w-6' alt='right Button' />
             </button>
                 <h1 className="font-bold text-2xl mb-2">What's on your mind?</h1>
 
