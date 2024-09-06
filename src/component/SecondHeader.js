@@ -24,12 +24,12 @@ const SecondHeader = (allData) => {
     return (
         <>
             <div className="h-[256px]">
-            <button onClick={scrollLeft}>
-                <img src={require("../assets/svgImages/reshot-icon-arrow-left.svg")} className='h-6 w-6' alt='letf Button' />
+            <button onClick={scrollLeft} className="w-8 h-8 bg-indigo-100 rounded-full ">
+                <img src={require("../assets/svgImages/reshot-icon-arrow-left.svg")} className='h-5 w-5 m-1' alt='left Button' />
             </button>
             <span>{"  "}</span>
-            <button onClick={scrollRight}>
-                <img src={require("../assets/svgImages/reshot-icon-arrow-right.svg")} className='h-6 w-6' alt='right Button' />
+            <button onClick={scrollRight} className="w-8 h-8 bg-indigo-100 rounded-full ">
+                <img src={require("../assets/svgImages/reshot-icon-arrow-right.svg")} className='h-5 w-5 m-1' alt='right Button' />
             </button>
                 <h1 className="font-bold text-2xl mb-2">What's on your mind?</h1>
 
