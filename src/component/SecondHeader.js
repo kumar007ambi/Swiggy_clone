@@ -23,7 +23,7 @@ const SecondHeader = (allData) => {
     };
     return (
         <>
-            <div className="h-[256px]">
+            <div className="h-[254px]">
             <button onClick={scrollLeft} className="w-8 h-8 bg-indigo-100 rounded-full ">
                 <img src={require("../assets/svgImages/reshot-icon-arrow-left.svg")} className='h-5 w-5 m-1' alt='left Button' />
             </button>
