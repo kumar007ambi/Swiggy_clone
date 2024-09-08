@@ -2,6 +2,7 @@ import { CDN_URL } from "../utils/constant";
 import React from "react";
 import ratingStar from "../assets/svgImages/rating-svgrepo-com.svg";
 import dot from "../assets/svgImages/dot-svgrepo-com.svg";
+import { MdStars } from "react-icons/md"
 //ResturantCard
 //we can also desctructure the props name as({resname,cuisine})
 const RestaurantCard = (props) => {
@@ -9,10 +10,15 @@ const RestaurantCard = (props) => {
   const { resData } = props;
   const { deliveryTime } = resData?.info?.sla;
   //help of optional chaining
-  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo,locality
+  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo,locality,aggregatedDiscountInfoV3
  } =
     resData?.info;
+let discountInfo = "";
 
+    if(aggregatedDiscountInfoV3) {
+        const { header, subHeader } = aggregatedDiscountInfoV3;
+        discountInfo = (header ? header + " " : "") + (subHeader ? subHeader : "");
+    }
   return (
     <div className="ml-10">
       <div
@@ -25,15 +31,21 @@ const RestaurantCard = (props) => {
             alt="res-logo"
             src={CDN_URL + cloudinaryImageId}
           />
+           {/* <div className="absolute bottom-0 left-0 right-0 h-[81px] text-left grid content-end px-3 pb-2  */}
+                    {/* bg-gradient-to-b from-[#1b1e2400] to-[#1b1e24] rounded-2xl"> */}
+                    <div className="font-bold text-[21px] w-auto whitespace-nowrap text-[#ffffffeb]">
+                        {discountInfo}
+                    </div>
+                {/* </div> */}
         </div>
         <div className="">
           <div  className="mt-[-113px] font-bold">
-            <h1>{name}</h1>
+            <h1 className="font-semibold text-lg truncate overflow-hidden whitespace-nowrap">{name}</h1>
           </div>
           <div
             className="h-5 w-5"
           >
-            <img src={ratingStar} alt="ratings" />
+            <MdStars className="align-middle" size={22} color="#0f8a65" /> 
           </div>
           <div className="ml-[24px] mt-[-22px] font-bold" >
             <h4>{avgRating} <img className="w-5 h-10 ml-[17px] mt-[-30px]" src={dot} alt="dot"/></h4>

@@ -49,7 +49,7 @@ const Body = () => {
   return listOfRest.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body mx-[180px]">
+    <div className="body max-w-[1080px] mx-auto pt-[80px] pb-48">
     
     <SecondHeader data={allData}/>
     <Banner/>
@@ -92,11 +92,12 @@ const Body = () => {
           </button>
         </div>
       </div> */}
-      <div className="flex flex-wrap">
+      <div className="restaurant-container grid grid-cols-4 gap-8">
         {filteredResturant.map((restuarant) => (
           <Link
             key={restuarant.info.id}
             to={"/restaurants/" + restuarant.info.id}
+            className="transition-all duration-100 hover:scale-95"
           >
             {/* {restuarant.info.isOpen ? (
               <OpenRestaurant resData={restuarant} />
