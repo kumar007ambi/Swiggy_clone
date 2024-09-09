@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import {useSelector} from "react-redux"
+import logoSvg from "../assets/svgImages/swiggy.svg"
 //Header
 const Header = () => {
   const [btnReactName, setBtnReactName] = useState("Login");
@@ -19,7 +20,7 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-slate-400 h-24">
       <div className="logo-container">
-        <img className="w-[101px]" src={LOGO_URL} />
+        <img className="w-[101px]" src={logoSvg} />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
