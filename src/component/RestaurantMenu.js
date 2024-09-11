@@ -11,7 +11,7 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(null);
   //custom hooks
   const resInfo = useRestaurantMenu(resId);
-
+  console.log("data",resInfo)
   const dummy = "Dummy Data";
 
   // useEffect(() => {
@@ -27,9 +27,9 @@ const RestaurantMenu = () => {
   if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[0]?.card?.card?.info;
+    resInfo?.cards[2]?.card?.card?.info;
   const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
   //console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
   const categories =
@@ -48,7 +48,7 @@ const RestaurantMenu = () => {
       </p>
       {/* controlled components */}
       {/* categories accordions  */} 
-      {categories.map((category,index) => (
+      {categories?.map((category,index) => (
         <RestaurantCategory
           key={category?.card?.card.title}
           data={category?.card?.card}
