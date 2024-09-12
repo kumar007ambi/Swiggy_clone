@@ -8,7 +8,7 @@ import { MdStars } from "react-icons/md"
 const RestaurantCard = (props) => {
   console.log("props",props);
   const { resData } = props;
-  const { deliveryTime } = resData?.info?.sla;
+  const { slaString } = resData?.info?.sla;
   //help of optional chaining
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo,locality,aggregatedDiscountInfoV3
  } =
@@ -52,7 +52,7 @@ let discountInfo = "";
           </div>
           <div className="ml-[55px] mt-[-34px] font-bold" >
             <h4>
-              <h4> { deliveryTime} mins</h4>{" "}
+              <h4> { slaString} </h4>{" "}
             </h4>
           </div>
         </div>
