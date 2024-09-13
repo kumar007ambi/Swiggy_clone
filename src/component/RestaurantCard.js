@@ -39,8 +39,8 @@ let discountInfo = "";
                 {/* </div> */}
         </div>
         <div className="">
-          <div  className="mt-[-113px] font-bold">
-            <h1 className="font-semibold text-lg truncate overflow-hidden whitespace-nowrap">{name}</h1>
+          <div  className="mt-[-113px] ">
+            <h3 className="font-bold text-lg truncate overflow-hidden whitespace-nowrap">{name}</h3>
           </div>
           <div
             className="h-5 w-5"
@@ -57,10 +57,10 @@ let discountInfo = "";
           </div>
         </div>
         <div className="">
-          <h4>{cuisines.join(", ").substring(0,30)+"..."}</h4>
+          <h4 style={{color:'rgba(2, 6, 12, 0.6)'}}>{cuisines.join(", ").substring(0,30)+"..."}</h4>
         </div>
         <div>
-        {/* <h4>{locality.substring(0,20)+"..."}</h4> */}
+        <h4 style={{color:'rgba(2, 6, 12, 0.6)'}}>{locality.substring(0,20)+"..."}</h4>
         </div>
       
       </div>
