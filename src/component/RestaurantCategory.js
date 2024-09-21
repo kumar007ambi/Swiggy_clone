@@ -17,12 +17,12 @@ const RestaurantCategory = ({ data ,showItems, setShowIndex,dummy}) => {
           onClick={handleClick}
         >
           <span className="font-bold text-lg">
-            {data.title} ({data.itemCards.length})
+            {data?.title} ({data?.itemCards?.length})
           </span>
           <span>⬇️</span>
         </div>
 
-        {showItems && <ItemList items={data.itemCards}  dummy={dummy}/>}
+        {showItems && <ItemList items={data?.itemCards}  dummy={dummy}/>}
       </div>
     </div>
   );
