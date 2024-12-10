@@ -11,7 +11,7 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(null);
   //custom hooks
   const resInfo = useRestaurantMenu(resId);
-  console.log("data",resInfo)
+ // console.log("data",resInfo)
   const dummy = "Dummy Data";
 
   // useEffect(() => {
@@ -31,14 +31,14 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
-  //console.log(resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
+  //console.log("loggggg",resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
   const categories =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  //console.log(categories);
+  //console.log("catoehry",categories);
 
   return (
     <div className="text-center">

@@ -1,7 +1,9 @@
 import { CDN_URL } from "../utils/constant";
 import {useDispatch} from 'react-redux'
 import { addItem } from "../utils/cartSlice";
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemList = ({ items ,dummy }) => {
  // console.log(items);
@@ -9,9 +11,12 @@ const ItemList = ({ items ,dummy }) => {
   const handleAddItem = (item) => {
     // Dispatch an action
     dispatch(addItem(item));
+    console.log("log",item?.card?.info?.name)
+    toast.success(`${item?.card?.info?.name} added to cart!`);
   };
   return (
     <div>
+     <ToastContainer />
       {items.map((item) => (
         <div
           key={item.card.info.id}
@@ -34,6 +39,7 @@ const ItemList = ({ items ,dummy }) => {
               <button
                 className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
               onClick={() => handleAddItem(item)}
+             
               >
                 Add +
               </button>
