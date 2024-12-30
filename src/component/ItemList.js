@@ -14,6 +14,9 @@ const ItemList = ({ items, dummy }) => {
     console.log("log", item?.card?.info?.name)
     toast.success(`${item?.card?.info?.name} added to cart!`);
   };
+  const removeItemtem = (item) => {
+    dispatch(removeItem(item));
+  }
   return (
     <div>
       <ToastContainer />
@@ -42,6 +45,13 @@ const ItemList = ({ items, dummy }) => {
 
               >
                 Add +
+              </button>
+               <button
+                className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
+                onClick={() => removeItemtem(item)}
+
+              >
+                Remove -
               </button>
             </div>
             <img src={CDN_URL + item.card.info.imageId} className="w-full" />
