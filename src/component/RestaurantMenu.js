@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   const [showIndex, setShowIndex] = useState(null);
   //custom hooks
-  const resInfo = useRestaurantMenu(resId);
+  const restaurantData = useRestaurantMenu(resId);
  // console.log("data",resInfo)
   const dummy = "Dummy Data";
 
@@ -24,16 +24,17 @@ const RestaurantMenu = () => {
   //   console.log(json);
   //   setResInfo(json.data);
   // };
-  if (resInfo === null) return <Shimmer />;
+  if (restaurantData === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[2]?.card?.card?.info;
+    restaurantData?.cards[2]?.card?.card?.info;
   const { itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    restaurantData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
   //console.log("loggggg",resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
+  const restaurant = restaurantData?.cards[0]?.card?.card?.info;
   const categories =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    restaurantData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
@@ -54,7 +55,7 @@ const RestaurantMenu = () => {
           data={category?.card?.card}
           showItems={index === showIndex ? true : false}
           setShowIndex={() => setShowIndex(index)}
-           dummy={dummy}
+           restaurant={restaurant}
         />
       ))}
     </div>
