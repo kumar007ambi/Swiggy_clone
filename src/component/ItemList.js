@@ -1,19 +1,33 @@
 import { CDN_URL } from "../utils/constant";
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { addItem, removeItem } from "../utils/cartSlice";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-const ItemList = ({ items, dummy }) => {
+const ItemList = ({ items, restaurant }) => {
   console.log(items);
+  const { name, price, defaultPrice, description, imageId, isVeg } = items;
   const dispatch = useDispatch()
+  const selectedRestaurant = useSelector(state => state.cart.selectedRestaurant);
   const handleAddItem = (item) => {
     // Dispatch an action
-    dispatch(addItem(item));
-    console.log("log", item?.card?.info?.name);
+    //dispatch(addItem(item));
+    // console.log("log", item?.card?.info?.name);
     // toast.success(`${item?.card?.info?.name} added to cart!`);
-  };
+    let dataToAdd;
+    if (!price) {
+      dataToAdd = { ...items, price: defaultPrice };
+    } else {
+      dataToAdd = { ...items };
+    }
+
+    if (selectedRestaurant && selectedRestaurant?.id !== restaurant?.id) {
+      dispatch(addItem(dataToAdd));
+    }else{
+      dispatch(addItem(restaurant));
+    }
+  }
   const removeItemtem = (item) => {
     dispatch(removeItem(item));
   }
@@ -41,7 +55,7 @@ const ItemList = ({ items, dummy }) => {
             <div className="absolute">
               <button
                 className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
-                onClick={() => handleAddItem(item)}
+                onClick={() => handleAddItem}
 
               >
                 Add +
