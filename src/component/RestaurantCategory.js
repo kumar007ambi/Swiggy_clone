@@ -1,29 +1,38 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
+import ItemCateogoryList from "./ItemCateogoryList";
 
-const RestaurantCategory = ({ data ,showItems, setShowIndex,dummy}) => {
-  //const [showItems, setShowItesm] = useState(false);
-  //console.log(data)
+const RestaurantCategory = ({ data, restaurant }) => {
+  const [showItems, setshowItems] = useState(true);
+  const { title, itemCards } = data;
+  //console.log("itemCards", itemCards);
   //accordian open close logic
-  const handleClick = () => {
-    setShowIndex();
-  };
+  const handleShowToggle = () =>
+    setshowItems(showItems => !showItems);
+  
   return (
-    <div>
-      {/* Header */}
-      <div className="w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4">
-        <div
-          className="flex justify-between cursor-pointer"
-          onClick={handleClick}
-        >
-          <span className="font-bold text-lg">
-            {data?.title} ({data?.itemCards?.length})
-          </span>
-          <span>⬇️</span>
-        </div>
+    <div className="border-b-4">
+      <div
+        className="flex justify-between font-bold cursor-pointer px-2 py-4"
+        onClick={handleShowToggle}
+      >
+        <span>
+          {title} ({itemCards?.length})
+        </span>
+        {showItems ? <span>⬇️</span> : <span>⬆</span>}
 
-        {showItems && <ItemList items={data?.itemCards}  dummy={dummy}/>}
       </div>
+     {showItems && (
+        <div className={`collapsible transition-[height] duration-300 ${showItems ? 'h-[auto]' : 'h-0'}`}>
+          {itemCards?.map((item) => (
+            <ItemList
+              key={item?.card?.info?.id}
+              data={item?.card?.info}
+              restaurant={restaurant}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
