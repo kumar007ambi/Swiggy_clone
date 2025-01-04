@@ -5,7 +5,7 @@ import { SUBHEADERURLLINK } from '../utils/constant';
 import { foodCategoryMap } from '../utils/mockData';
 import { useState, useRef } from "react";
 const SecondHeader = (allData) => {
-    console.log("second header", allData)
+    // console.log("second header", allData)
     const [scrollPos, setScrollPos] = useState(0);
     const scrollContainerRef = useRef(null);
 
