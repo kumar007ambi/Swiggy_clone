@@ -10,6 +10,7 @@ import RestaurantMenu from "./component/RestaurantMenu";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./component/Cart"
+import Footer from "./component/Footer";
 // import Grocery from "./component/Grocery";
 
 //chunking
@@ -35,6 +36,7 @@ const AppLayout = () => {
         {/* If the path is /contact */}
         {/* <Contact /> */}
       </div>
+      <Footer />
     </Provider>
   );
 };
