@@ -6,6 +6,7 @@ import { SWIGGY_MENU_URL } from "../utils/constant";
 import RestaurantCategory from "./RestaurantCategory";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { FiShoppingBag } from"react-icons/fi"
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -54,7 +55,7 @@ const RestaurantMenu = () => {
                         <span className="mr-2">
                             View Cart
                         </span>
-                        {/* <FiShoppingBag size={15} /> */}
+                        <FiShoppingBag size={15} />
                     </Link>
                 </div>
             }
