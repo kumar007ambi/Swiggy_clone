@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ItemList = ({ data, restaurant }) => {
-  console.log("data", data);
+  // console.log("data", data);
   const { name, price, defaultPrice, description, imageId, isVeg } = data;
   const dispatch = useDispatch()
   const selectedRestaurant = useSelector(state => state.cart.selectedRestaurant);

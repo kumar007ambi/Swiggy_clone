@@ -10,6 +10,9 @@ const Cart = () => {
   const totalAmount = useSelector((store) => store.cart.totalAmount);
   const dispatch = useDispatch();
 
+  console.log("cartItems", selectedRestaurant?.imageId);
+  
+
   const navigate = useNavigate();
     
     const handleGoBack = () => {

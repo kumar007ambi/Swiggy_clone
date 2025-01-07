@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 import ItemCateogoryList from "./ItemCateogoryList";
+import { PiCaretDownBold, PiCaretUpBold } from "react-icons/pi";
 
 const RestaurantCategory = ({ data, restaurant }) => {
   const [showItems, setshowItems] = useState(true);
@@ -19,7 +20,7 @@ const RestaurantCategory = ({ data, restaurant }) => {
         <span>
           {title} ({itemCards?.length})
         </span>
-        {showItems ? <span>⬇️</span> : <span>⬆</span>}
+        {showItems ? <PiCaretUpBold /> : <PiCaretDownBold />}
 
       </div>
      {showItems && (
