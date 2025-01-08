@@ -10,7 +10,7 @@ const Cart = () => {
   const totalAmount = useSelector((store) => store.cart.totalAmount);
   const dispatch = useDispatch();
 
-  console.log("cartItems", selectedRestaurant?.imageId);
+  console.log("imageId", selectedRestaurant);
   
 
   const navigate = useNavigate();
@@ -65,7 +65,7 @@ const Cart = () => {
                             <div className="relative w-14 h-14 mr-4 after:absolute after:content-[''] 
                                 after:left-0 after:top-0 after:bottom-0 after:right-0 after:bg-blend-overlay after:bg-[#282c3f0d]"
                                 >
-                                <img className="h-full" src={CDN_URL + selectedRestaurant?.cloudinaryImageId} alt="res-img" />
+                                <img className="h-full" src={CDN_URL+ selectedRestaurant?.imageId} alt="res-img" />
                             </div>
                             <div className="relative after:absolute after:left-0 after:bottom-0 after:content-[''] after:bg-[#282c3f] after:w-10 after:h-[3px]">
                                 <div className="text-[17px] font-medium text-[#282c3f]">{selectedRestaurant?.name} {"    "}</div>
