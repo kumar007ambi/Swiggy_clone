@@ -42,6 +42,8 @@ const cartSlice = createSlice({
       state.totalAmount = 0;
     },
     setRestaurant: (state, action) => {
+      console.log("action", action.payload);
+      
       state.selectedRestaurant = action.payload;
     },
     clearRestaurant: (state) => {
