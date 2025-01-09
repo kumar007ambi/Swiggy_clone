@@ -10,7 +10,7 @@ const Cart = () => {
   const totalAmount = useSelector((store) => store.cart.totalAmount);
   const dispatch = useDispatch();
 
-  console.log("imageId", selectedRestaurant);
+//   console.log("imageId", selectedRestaurant);
   
 
   const navigate = useNavigate();
