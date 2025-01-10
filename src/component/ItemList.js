@@ -1,7 +1,8 @@
 import { CDN_URL } from "../utils/constant";
 import { useDispatch, useSelector } from 'react-redux'
 import { addItem, computeTotal,setRestaurant } from "../utils/cartSlice";
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
+import { BsCaretDownSquare } from "react-icons/bs";
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -34,7 +35,7 @@ const ItemList = ({ data, restaurant }) => {
     <div className="flex justify-between min-h-[102px] px-2 pt-1 pb-4 my-1 border-b-2 last:border-b-0">
 
       <div>
-        {/* <BsCaretDownSquare className="my-2" color={isVeg ? "#0f8a65" : "#e43b4f"} /> */}
+        <BsCaretDownSquare className="my-2" color={isVeg ? "#0f8a65" : "#e43b4f"} />
         <h3 className="font-medium text-md text-[#3e4152]">{name}</h3>
         <span className="text-sm text-[#3e4152]">₹{parseFloat(((price || defaultPrice) / 100).toFixed(2))}</span>
         <p className="mt-3 text-sm text-[#282c3f73] max-w-[750px] ">{description}</p>
