@@ -3,6 +3,7 @@ import { addItem,computeTotal,clearRestaurant,removeItem} from "../utils/cartSli
 // import ItemList from "./ItemList";
 import { CDN_URL } from "../utils/constant";
 import { Link, useNavigate } from "react-router-dom";
+import launchFireworks from "../utils/canvasFireworks";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -10,7 +11,7 @@ const Cart = () => {
   const totalAmount = useSelector((store) => store.cart.totalAmount);
   const dispatch = useDispatch();
 
-//   console.log("imageId", selectedRestaurant);
+  console.log("imageId", cartItems);
   
 
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const Cart = () => {
 
     const handleSuccessfulOrder = () => {
         alert("Congratulations! Your order is successfully placed");
-        // launchFireWorks();
+        launchFireworks();
     }
      if(!cartItems?.length) {
         return (
@@ -60,7 +61,7 @@ const Cart = () => {
                 {/* <button className="text-white bg-red-500 rounded-md p-2 mb-4" onClick={handleClear}>Clear Cart</button> */}
 
                 <div className="mt-6">
-                    <Link to={`/restaurant/${selectedRestaurant?.id}`} className="block max-w-max">
+                    {/* <Link to={`/restaurant/${selectedRestaurant?.id}`} className="block max-w-max">
                         <div className="flex">
                             <div className="relative w-14 h-14 mr-4 after:absolute after:content-[''] 
                                 after:left-0 after:top-0 after:bottom-0 after:right-0 after:bg-blend-overlay after:bg-[#282c3f0d]"
@@ -72,12 +73,14 @@ const Cart = () => {
                                 <div className="text-[13px] text-[#686b78]">{selectedRestaurant?.areaName}</div>
                             </div>
                         </div>
-                    </Link>
+                    </Link> */}
                     <div className="items mt-6 max-h-[350px] overflow-y-auto">
                         {cartItems?.map((item) => (
                             <div key={item?.id} className="flex items-center py-2.5">
-                                {/* <BsCaretDownSquare className="mr-3.5" color={item?.isVeg ? "#0f8a65" : "#e43b4f"} /> */}
-                                <div className="font-normal text-[#282c3f] text-[14px] text-ellipsis w-56 truncate">{item?.name}</div>
+                             
+                                
+                                <div className="h-12 w-12"><img  src={CDN_URL+item?.imageId}/></div>
+                                <div className="m-2 font-normal text-[#282c3f] text-[14px] text-ellipsis w-56 truncate">{item?.name}</div>
                                 <div className="flex items-center ml-4">
                                     <div className="flex border items-center justify-center w-[70px] text-sm h-8 border-[#d4d5d9]">
                                         <span 
@@ -116,16 +119,16 @@ const Cart = () => {
                     <hr className="my-5 block" />
                     <div className="flex items-center text-[13px] font-light my-2.5">
                         <div className="">Platform fee</div>
-                        <div className="flex-1 text-right">₹{2}</div>
+                        <div className="flex-1 text-right">₹{10}</div>
                     </div>
                     <div className="flex items-center text-[13px] font-light my-2.5">
                         <div className="">GST & Restaurant Charges</div>
-                        <div className="flex-1 text-right">₹{32}</div>
+                        <div className="flex-1 text-right">₹{64}</div>
                     </div>
                 </div>
                 <div className="flex items-center pt-6 text-[#282c3f] font-semibold">
                     <div className="uppercase">To Pay</div>
-                    <div className="flex-1 text-right">₹{totalAmount + 53}</div>
+                    <div className="flex-1 text-right">₹{totalAmount + 83}</div>
                 </div>
 
                 <div className="h-12 text-base flex font-semibold mt-10">

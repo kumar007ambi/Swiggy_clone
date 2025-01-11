@@ -25,7 +25,6 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-between bg-[#02060c] px-[17.5%] py-[4rem]">
                 <div className="text-white flex items-center">
-                    {/* <SiSwiggy size={30} /> */}
                     <span className="ml-3 text-lg font-semibold">Swiggy Clone @2024</span>
                 </div>
                 <div className="text-white">Made with Passion By 

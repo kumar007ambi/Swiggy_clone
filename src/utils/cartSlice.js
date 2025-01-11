@@ -42,7 +42,7 @@ const cartSlice = createSlice({
       state.totalAmount = 0;
     },
     setRestaurant: (state, action) => {
-      console.log("action", action.payload);
+      // console.log("actionFORRES", action.payload);
       
       state.selectedRestaurant = action.payload;
     },
