@@ -7,15 +7,17 @@ import { BsCaretDownSquare } from "react-icons/bs";
 import 'react-toastify/dist/ReactToastify.css';
 
 const ItemList = ({ data, restaurant }) => {
-  // console.log("data", data);
+  // console.log("data", restaurant);
   const { name, price, defaultPrice, description, imageId, isVeg } = data;
   const dispatch = useDispatch()
   const selectedRestaurant = useSelector(state => state.cart.selectedRestaurant);
+
+  // console.log("dat", selectedRestaurant);
   const handleAddItem = () => {
     // Dispatch an action
     let dataToAdd;
     if (!price) {
-      dataToAdd = { ...data, price: defaultPrice };
+      dataToAdd = { ...data, price: defaultPrice,imageId: imageId };  
     } else {
       dataToAdd = { ...data };
     }

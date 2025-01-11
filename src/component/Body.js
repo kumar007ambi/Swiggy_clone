@@ -8,21 +8,35 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurantList from "../utils/useRestaurantList";
 import SecondHeader from "./SecondHeader";
 import Banner from "./Banner"
+import ShimmerCard from "./ShimmerCard";
 //Body
 const Body = () => {
   const [listOfRest, setListOfRest] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [filteredResturant, setFilteredRestuarnt] = useState([]);
   const [allData,setAllData]=useState([]);
+  const [showShimmer, setShowShimmer] = useState(false);
   //HOC
   // const OpenRestaurant = openResturantLabel(RestaurantCard);
-
+  const handleScroll = () => {
+    //scrollY - how much I have scrolled
+    // innerHeight - heigh of the window(visible setion)
+    // document.body.scrollHeight - total height of the web page
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+      fetchData();
+    }
+  };
   useEffect(() => {
     fetchData();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const fetchData = async () => {
+    setShowShimmer(true);
     const data = await fetch(WEB_API);
     const json = await data.json();
+    setShowShimmer(false);
     //optional chaining
     setAllData(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
     // console.log("body",json?.data?.cards[0]?.card?.card?.imageGridCards?.info)
@@ -30,9 +44,9 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     // console.log( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    setFilteredRestuarnt(
+    setFilteredRestuarnt((filteredResturant) =>[...filteredResturant,...
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    ]);
   };
 
   const customHook=useRestaurantList(WEB_API)
@@ -107,6 +121,7 @@ const Body = () => {
           </Link>
         ))}
       </div>
+      {showShimmer && <ShimmerCard className="flex flex-wrap"  />}
     </div>
   );
 };
