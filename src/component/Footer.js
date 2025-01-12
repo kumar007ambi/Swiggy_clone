@@ -25,9 +25,9 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-between bg-[#02060c] px-[17.5%] py-[4rem]">
                 <div className="text-white flex items-center">
-                    <span className="ml-3 text-lg font-semibold">Swiggy Clone @2024</span>
+                    <span className="ml-3 text-lg font-semibold">Swiggy Clone @2025</span>
                 </div>
-                <div className="text-white">Made with Passion By 
+                <div className="text-white">Made By 
                     <a href="https://www.linkedin.com/in/connect-with-ambika/" className="text-[#fc8019]" target="_blank"> Ambika Kumar Kewat</a>
                 </div>
             </div>
