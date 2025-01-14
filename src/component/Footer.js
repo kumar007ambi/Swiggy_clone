@@ -10,7 +10,7 @@ const Footer = () => {
                         now
                     </div>
                 </div>
-                <div className="flex flex-row justify-center h-16 my-auto mx-3">
+                <div className="flex flex-row justify-center h-16 my-auto mx-2">
                     <img
                         className="h-[64px] my-auto mx-[12px] "
                         src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png"
