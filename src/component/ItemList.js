@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constant";
 import { useDispatch, useSelector } from 'react-redux'
-import { addItem, computeTotal,setRestaurant } from "../utils/cartSlice";
+import { addItem, computeTotal, setRestaurant } from "../utils/cartSlice";
 // import { ToastContainer, toast } from 'react-toastify';
 import { BsCaretDownSquare } from "react-icons/bs";
 
@@ -17,20 +17,20 @@ const ItemList = ({ data, restaurant }) => {
     // Dispatch an action
     let dataToAdd;
     if (!price) {
-      dataToAdd = { ...data, price: defaultPrice,imageId: imageId };  
+      dataToAdd = { ...data, price: defaultPrice, imageId: imageId };
     } else {
       dataToAdd = { ...data };
     }
 
     if (selectedRestaurant && selectedRestaurant?.id !== restaurant?.id) {
       // dispatch(addItem(dataToAdd));
-    } else if(selectedRestaurant && selectedRestaurant?.id === restaurant?.id){
+    } else if (selectedRestaurant && selectedRestaurant?.id === restaurant?.id) {
       dispatch(addItem(dataToAdd));
       dispatch(computeTotal());
-    }else{
-       dispatch(setRestaurant(restaurant));
-       dispatch(addItem(dataToAdd));
-       dispatch(computeTotal());
+    } else {
+      dispatch(setRestaurant(restaurant));
+      dispatch(addItem(dataToAdd));
+      dispatch(computeTotal());
     }
   }
   return (
