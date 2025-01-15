@@ -11,7 +11,7 @@ const Cart = () => {
     const totalAmount = useSelector((store) => store.cart.totalAmount);
     const dispatch = useDispatch();
 
-    console.log("imageId", cartItems);
+    // console.log("imageId", cartItems);
 
 
     const navigate = useNavigate();
