@@ -2,6 +2,7 @@ import React from 'react'
 import ItemList from './ItemList';
 
 const ItemCateogoryList = ({ items }) => {
+	 console.log("items", items);
 	return (
 		<div className="collapsible">
 			{items.map((item) => (
