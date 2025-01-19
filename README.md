@@ -29,6 +29,7 @@ Namaste React 🚀
 - HTTPs
 - Tree Shaking - remove unused code
 - Different dev and prod bundles
+- Infinit Scroll
 
  ...
  # React Hooks
