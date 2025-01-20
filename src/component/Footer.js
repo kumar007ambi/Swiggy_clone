@@ -28,7 +28,7 @@ const Footer = () => {
                     <span className="ml-3 text-lg font-semibold">Swiggy Clone @2025</span>
                 </div>
                 <div className="text-white">Made By
-                    <a href="https://www.linkedin.com/in/connect-with-ambika/" className="text-[#fc8019]" target="_blank"> Ambika Kumar Kewat</a>
+                    <a href="https://www.linkedin.com/in/ambikakumarkewat/" className="text-[#fc8019]" target="_blank"> Ambika Kumar Kewat</a>
                 </div>
             </div>
         </div>
