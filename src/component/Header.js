@@ -23,15 +23,6 @@ const Header = () => {
         <Link  className="w-14 h-14 self-center">
           <img className="" src={logoSvg} alt="" />
         </Link>
-        {/* <div className="ml-8 h-10 flex items-center max-w-xs self-center cursor-pointer hover:text-[#fc8019] text-sm group" onClick={() => setShowSidebar(!showSidebar)}>
-          <span className="relative after:content-[''] after:bottom-[-5px] after:left-0 after:absolute after:h-0.5 after:w-full after:group-hover:bg-[#fc8019] after:bg-[#3d4152]">
-            <span className="font-bold">Other</span>
-          </span>
-          <span className="ml-2 font-light group-hover:text-[#686b78a7] text-[#686b78] truncate text-ellipsis">{address}</span>
-          <span className="text-[#fc8019] text-xl ml-2">
-            <PiCaretDownBold size={18} />
-          </span>
-        </div> */}
         <ul className="flex flex-1 justify-end items-center h-full text-sm">
           <li className={` mr-[60px] font-semibold "text-[#fc8019]"} hover:text-[#fc8019] group`}>
             <Link className="flex" >
