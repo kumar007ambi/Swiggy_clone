@@ -15,14 +15,14 @@ const Header = () => {
 
   // Subscribing to the store using a Selector
   const cartItems = useSelector((store) => store.cart.items);
-  //console.log(cartItems);
+
 
   return (
     <header className="fixed top-0 z-[1000] w-full h-[80px] bg-white px-5 shadow-[0_15px_40px_-20px_rgba(40,44,63,0.15)]">
       <div className="h-full min-w-[1200px] max-w-[1200px] flex mx-auto">
         <Link  className="w-14 h-14 self-center">
           <img className="" src={logoSvg} alt="" />
-        </Link>
+        </Link> 
         <ul className="flex flex-1 justify-end items-center h-full text-sm">
           <li className={` mr-[60px] font-semibold "text-[#fc8019]"} hover:text-[#fc8019] group`}>
             <Link className="flex" >
