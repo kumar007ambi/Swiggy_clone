@@ -2,23 +2,6 @@ import { bannerList } from "../utils/mockData"
 import { useState, useRef } from "react";
 
 const Banner = () => {
-    // const [scrollPosition, setScrollPosition] = useState(0);
-    // const scrollRef = useRef(null);
-
-    // Handle scrolling
-    // const handleScroll = (direction) => {
-    //     console.log("i am scrolled")
-    //     const scrollAmount = 100; // Amount to scroll by (adjust as needed)
-    //     const newScrollPosition =
-    //         direction === 'left' ? scrollPosition - scrollAmount : scrollPosition + scrollAmount;
-
-    //     setScrollPosition(newScrollPosition);
-
-    //     scrollRef.current.scrollTo({
-    //         left: newScrollPosition,
-    //         behavior: 'smooth',
-    //     });
-    // };
     const [scrollPos, setScrollPos] = useState(0);
     const scrollContainerRef = useRef(null);
 
