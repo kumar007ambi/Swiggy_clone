@@ -58,8 +58,7 @@ const Cart = () => {
                 {/* <button className="text-white bg-red-500 rounded-md p-2 mb-4" onClick={handleClear}>Clear Cart</button> */}
 
                 <div className="mt-6">
-                        {/* <div className="flex">
-                            <div className="relative w-14 h-14 mr-4 after:absolute after:content-[''] 
+                            {/* <div className="relative w-14 h-14 mr-4 after:absolute after:content-[''] 
                                 after:left-0 after:top-0 after:bottom-0 after:right-0 after:bg-blend-overlay after:bg-[#282c3f0d]"
                                 >
                                 <img className="h-full" src={CDN_URL+ selectedRestaurant?.imageId} alt="res-img" />
