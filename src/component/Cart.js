@@ -59,15 +59,15 @@ const Cart = () => {
 
                 <div className="mt-6">
                             
-                    {/* //           after:left-0 after:top-0 after:bottom-0 after:right-0 after:bg-blend-overlay after:bg-[#282c3f0d]"
-                    //             >
-                    //             <img className="h-full" src={CDN_URL+ selectedRestaurant?.imageId} alt="res-img" />
-                    //         </div>
-                    //         <div className="relative after:absolute after:left-0 after:bottom-0 after:content-[''] after:bg-[#282c3f] after:w-10 after:h-[3px]">
-                    //             <div className="text-[17px] font-medium text-[#282c3f]">{selectedRestaurant?.name} {"    "}</div>
-                    //             <div className="text-[13px] text-[#686b78]">{selectedRestaurant?.areaName}</div>
-                    //         </div>
-                    //     </div> */}
+                            
+                                 {/* >
+                             <img className="h-full" src={CDN_URL+ selectedRestaurant?.imageId} alt="res-img" />
+                         </div>
+                            <div className="relative after:absolute after:left-0 after:bottom-0 after:content-[''] after:bg-[#282c3f] after:w-10 after:h-[3px]">
+                                <div className="text-[17px] font-medium text-[#282c3f]">{selectedRestaurant?.name} {"    "}</div>
+                             <div className="text-[13px] text-[#686b78]">{selectedRestaurant?.areaName}</div>
+                         </div>
+                        </div> */}
                     
                     <div className="items mt-6 max-h-[350px] overflow-y-auto">
                         {cartItems?.map((item) => (
