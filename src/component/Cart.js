@@ -60,9 +60,9 @@ const Cart = () => {
                 <div className="mt-6">
                             
                             
-                                 {/* >
-                             <img className="h-full" src={CDN_URL+ selectedRestaurant?.imageId} alt="res-img" />
-                         </div>
+                                 
+                            
+                        {/* > </div>
                             <div className="relative after:absolute after:left-0 after:bottom-0 after:content-[''] after:bg-[#282c3f] after:w-10 after:h-[3px]">
                                 <div className="text-[17px] font-medium text-[#282c3f]">{selectedRestaurant?.name} {"    "}</div>
                              <div className="text-[13px] text-[#686b78]">{selectedRestaurant?.areaName}</div>
