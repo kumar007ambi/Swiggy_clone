@@ -56,19 +56,10 @@ const Cart = () => {
             <div className="w-6/12 bg-white mt-8 m-10 py-5 px-10 min-h-[550px] self-start">
                 <h2 className="font-bold text-xl uppercase mt-2 mb-4 text-left">Secure Checkout</h2>
                 {/* <button className="text-white bg-red-500 rounded-md p-2 mb-4" onClick={handleClear}>Clear Cart</button> */}
-
                 <div className="mt-6">
-                            
-                            
-                                 
-                            
-                          
-                    
                     <div className="items mt-6 max-h-[350px] overflow-y-auto">
                         {cartItems?.map((item) => (
                             <div key={item?.id} className="flex items-center py-2.5">
-
-
                                 <div className="h-12 w-12"><img src={CDN_URL + item?.imageId} /></div>
                                 <div className="m-2 font-normal text-[#282c3f] text-[14px] text-ellipsis w-56 truncate">{item?.name}</div>
                                 <div className="flex items-center ml-4">
