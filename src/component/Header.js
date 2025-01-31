@@ -77,8 +77,7 @@ export default Header;
 
 
 
-{/* <div className="flex justify-between bg-slate-400 h-24">
-      <div className="logo-container">
+     {/* <div className="logo-container">
         <img className="w-[101px]" src={logoSvg} />
       </div>
       <div className="flex items-center">
