@@ -77,8 +77,8 @@ export default Header;
 
 
 
-     {/* <div className="logo-container">
-        <img className="w-[101px]" src={logoSvg} />
+  
+       {/*  <img className="w-[101px]" src={logoSvg} />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
