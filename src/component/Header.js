@@ -78,8 +78,8 @@ export default Header;
 
 
   
-       {/*  <img className="w-[101px]" src={logoSvg} />
-      </div>
+   
+          {/*</div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
           <li className="px-4 text-white">
