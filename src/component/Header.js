@@ -74,8 +74,8 @@ const Header = () => {
 };
 
 export default Header;
-           {/*<li className="px-4 text-white">
-            Online Status : {onlineStatus === true ? "🟢" : "🔴"}
+         
+            {/*Online Status : {onlineStatus === true ? "🟢" : "🔴"}
           </li>
           <li className="px-4 text-white">
             <Link to="/">Home</Link>
