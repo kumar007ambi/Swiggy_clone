@@ -77,8 +77,8 @@ export default Header;
         
            
       
-            {/*  <Link to="/about">About Us</Link>
-          </li>
+         
+           {/*  </li>
           <li className="px-4 text-white">
             <Link to="/contact">Conatct Us</Link>
           </li>
