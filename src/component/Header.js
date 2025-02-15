@@ -74,8 +74,8 @@ const Header = () => {
 };
 
 export default Header;
-          {/*<li className="px-4 text-white">
-            <Link to="/contact">Conatct Us</Link>
+        
+           {/* <Link to="/contact">Conatct Us</Link>
           </li>
           <li className="px-4 text-white">
             <Link to="/grocery">Grocery</Link>
