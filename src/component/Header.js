@@ -74,8 +74,6 @@ const Header = () => {
 };
 
 export default Header;
-        
-           <Link to="/contact">Conatct Us</Link>
          {/* </li>
           <li className="px-4 text-white">
             <Link to="/grocery">Grocery</Link>
