@@ -74,9 +74,7 @@ const Header = () => {
 };
 
 export default Header;
-
-          {/* </li>
-           <li className="px-4 font-bold text-xl">
+            {/* <li className="px-4 font-bold text-xl">
             <Link to="/cart">Cart - ({cartItems.length} items)</Link>
           </li>
           <li className="px-4 text-white">
