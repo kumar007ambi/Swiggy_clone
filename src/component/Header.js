@@ -74,9 +74,8 @@ const Header = () => {
 };
 
 export default Header;
-           
-            {/* <Link to="/cart">Cart - ({cartItems.length} items)</Link>
-          </li>
+          
+            {/* <</li>
           <li className="px-4 text-white">
             <button
               className="bg-cyan-800 w-[100px] rounded"
