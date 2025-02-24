@@ -75,8 +75,7 @@ const Header = () => {
 
 export default Header;
           
-            {/* <</li>
-          <li className="px-4 text-white">
+          {/* <li className="px-4 text-white">
             <button
               className="bg-cyan-800 w-[100px] rounded"
               onClick={() => {
