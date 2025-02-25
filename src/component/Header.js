@@ -75,8 +75,7 @@ const Header = () => {
 
 export default Header;
           
-          {/* <li className="px-4 text-white">
-            <button
+             {/*  <button
               className="bg-cyan-800 w-[100px] rounded"
               onClick={() => {
                 btnReactName === "Login"
