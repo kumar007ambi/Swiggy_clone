@@ -74,8 +74,7 @@ const Header = () => {
 };
 
 export default Header;
-            {/*   className="bg-cyan-800 w-[100px] rounded"
-              onClick={() => {
+              {/*  onClick={() => {
                 btnReactName === "Login"
                   ? setBtnReactName("Logout")
                   : setBtnReactName("Login");
