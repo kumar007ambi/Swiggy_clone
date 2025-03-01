@@ -74,9 +74,8 @@ const Header = () => {
 };
 
 export default Header;
-             
-                 {/*btnReactName === "Login"
-                  ? setBtnReactName("Logout")
+                //  btnReactName === "Login"
+                 {/* ? setBtnReactName("Logout")
                   : setBtnReactName("Login");
               }}
             >
