@@ -75,9 +75,7 @@ const Header = () => {
 
 export default Header;
     
-                
-                 {/*  : setBtnReactName("Login");
-              }}
+                   {/*  }}
             >
               {btnReactName}
             </button>
