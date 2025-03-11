@@ -74,7 +74,6 @@ const Header = () => {
 };
 
 export default Header;
-      
-    //     </ul>
+  
     //   </div>
     // </div> */}
