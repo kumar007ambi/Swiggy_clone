@@ -61,8 +61,8 @@ const ItemList = ({ data, restaurant }) => {
   );
 };
 export default ItemList;
-    {/*    {items.map((item) => (
-        <div
+ 
+          {/*     <div
           key={item.card.info.id}
           className="p-3 m-3 border-gray-200 border-b-2 text-left flex justify-between"
         >
