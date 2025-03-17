@@ -61,9 +61,7 @@ const ItemList = ({ data, restaurant }) => {
   );
 };
 export default ItemList;
- 
-          {/*     <div
-          key={item.card.info.id}
+            {/*      key={item.card.info.id}
           className="p-3 m-3 border-gray-200 border-b-2 text-left flex justify-between"
         >
           <div className="w-9/12">
