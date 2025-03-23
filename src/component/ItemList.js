@@ -61,9 +61,8 @@ const ItemList = ({ data, restaurant }) => {
   );
 };
 export default ItemList;
-                
-             {/*<div className="py-2">
-              <span>{item.card.info.name}</span>
+          
+              {/* <span>{item.card.info.name}</span>
               <span>
                 {" "}- ₹
                 {item.card.info.price
