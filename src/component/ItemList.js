@@ -62,9 +62,7 @@ const ItemList = ({ data, restaurant }) => {
 };
 export default ItemList;
               
-             
-                 {/*   ? item.card.info.price / 100
-                  : item.card.info.defaultPrice / 100}
+                  {/*   : item.card.info.defaultPrice / 100}
               </span>
             </div>
             <p className="text-xs">{item.card.info.description}</p>
