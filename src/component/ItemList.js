@@ -61,10 +61,7 @@ const ItemList = ({ data, restaurant }) => {
   );
 };
 export default ItemList;
-              
-               
-            {/*</div>
-            <p className="text-xs">{item.card.info.description}</p>
+            {/*<p className="text-xs">{item.card.info.description}</p>
           </div>
           <div className="w-3/12">
             <div className="absolute">
