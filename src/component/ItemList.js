@@ -62,8 +62,7 @@ const ItemList = ({ data, restaurant }) => {
 };
 export default ItemList;
         
-           {/* <div className="absolute">
-              <button
+               {/*  <button
                 className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
                 onClick={() => handleAddItem}
 
