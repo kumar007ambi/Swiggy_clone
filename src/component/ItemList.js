@@ -61,9 +61,7 @@ const ItemList = ({ data, restaurant }) => {
   );
 };
 export default ItemList;
-        
-               {/*  <button
-                className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
+               {/*   className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
                 onClick={() => handleAddItem}
 
               >
