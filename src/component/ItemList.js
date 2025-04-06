@@ -61,8 +61,8 @@ const ItemList = ({ data, restaurant }) => {
   );
 };
 export default ItemList;
-               {/*   className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
-                onClick={() => handleAddItem}
+               
+                {/*   onClick={() => handleAddItem}
 
               >
                 Add +
