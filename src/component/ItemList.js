@@ -62,8 +62,8 @@ const ItemList = ({ data, restaurant }) => {
 };
 export default ItemList;
                
-                {/*   onClick={() => handleAddItem}
-
+               
+{/* 
               >
                 Add +
               </button>
