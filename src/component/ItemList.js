@@ -60,11 +60,8 @@ const ItemList = ({ data, restaurant }) => {
     </div>
   );
 };
-export default ItemList;
-               
-               
-{/* 
-              >
+export default ItemList;         
+{/*   >
                 Add +
               </button>
             </div>
