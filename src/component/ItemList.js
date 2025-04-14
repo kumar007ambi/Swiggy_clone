@@ -61,8 +61,6 @@ const ItemList = ({ data, restaurant }) => {
   );
 };
 export default ItemList;         
-            {/*   <img src={CDN_URL + item.card.info.imageId} className="w-full" />
-          </div>
-        </div>
+         {/* </div>
       ))}
     </div> */}
