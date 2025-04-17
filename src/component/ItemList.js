@@ -63,4 +63,3 @@ const ItemList = ({ data, restaurant }) => {
 export default ItemList;         
        
    
-    {/* </div> */}
