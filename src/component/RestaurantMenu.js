@@ -65,9 +65,7 @@ const RestaurantMenu = () => {
           </div>
         </div>
       </div>
-   
-      {/* <p className="font-bold text-lg">
-        {cuisines.join(",")} - {costForTwoMessage}
+       {/*  {cuisines.join(",")} - {costForTwoMessage}
       </p> */}
       {/* controlled components */}
       {/* categories accordions  */}
