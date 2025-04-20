@@ -65,8 +65,6 @@ const RestaurantMenu = () => {
           </div>
         </div>
       </div>
-   
-       {/*   </p> */}
       {/* controlled components */}
       {/* categories accordions  */}
       {categories?.map((category, index) => (
