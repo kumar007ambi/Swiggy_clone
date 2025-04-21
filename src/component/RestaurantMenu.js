@@ -52,7 +52,7 @@ const RestaurantMenu = () => {
           </div>
 
           {/* Category */}
-          {/* <div className="text-gray-500 text-sm">Pizzas</div> */}
+          
 
           {/* Location and Time */}
           <div className="pt-2 border-t border-gray-200 mt-2">
