@@ -52,8 +52,6 @@ const RestaurantMenu = () => {
           </div>
 
           {/* Category */}
-          
-
           {/* Location and Time */}
           <div className="pt-2 border-t border-gray-200 mt-2">
             <div className="flex justify-between items-center">
