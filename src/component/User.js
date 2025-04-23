@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const User = ({ name }) => {
   const [count] = useState(0);
-  // useEffect(() => {
+  
   //   const timer = setInterval(() => {
   //     console.log("Ticking");
   //   }, 1000);
