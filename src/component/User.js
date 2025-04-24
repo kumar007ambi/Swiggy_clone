@@ -3,8 +3,6 @@ import { useState } from "react";
 
 const User = ({ name }) => {
   const [count] = useState(0);
-  
-  //   const timer = setInterval(() => {
   //     console.log("Ticking");
   //   }, 1000);
   //   //this is how we clear our app and prevent from memory leakage also it is called unmounting phase
