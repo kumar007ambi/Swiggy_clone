@@ -3,7 +3,6 @@ import { useState } from "react";
 
 const User = ({ name }) => {
   const [count] = useState(0);
-  //   };
   // }, []);
   return (
     <div className="user-card bg-zinc-100 rounded">
