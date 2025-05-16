@@ -6,7 +6,7 @@ import { PiCaretDownBold, PiCaretUpBold } from "react-icons/pi";
 const RestaurantCategory = ({ data, restaurant }) => {
   const [showItems, setshowItems] = useState(true);
   const { title, itemCards } = data;
-  //console.log("itemCards", itemCards);
+  
   //accordian open close logic
   const handleShowToggle = () =>
     setshowItems(showItems => !showItems);
