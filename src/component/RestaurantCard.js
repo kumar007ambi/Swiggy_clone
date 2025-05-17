@@ -6,7 +6,7 @@ import { MdStars } from "react-icons/md"
 //ResturantCard
 //we can also desctructure the props name as({resname,cuisine})
 const RestaurantCard = (props) => {
-  // console.log("props",props);
+
   const { resData } = props;
   const { slaString } = resData?.info?.sla;
   //help of optional chaining
