@@ -75,7 +75,6 @@ const RestaurantCard = (props) => {
 //         <label className="absolute bg-black text-white m-2 p-2 rounded-md">Open</label>
 //         <RestaurantCard {...props}/>
 //       </div>
-//     );
   
 
 
