@@ -71,9 +71,5 @@ const RestaurantCard = (props) => {
 // export const openResturantLabel = (RestaurantCard) => {
 //   return (props) => {
 //     return (
-//       <div>
-
-
-
 
 export default RestaurantCard;
