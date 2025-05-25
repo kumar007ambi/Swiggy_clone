@@ -70,6 +70,6 @@ const RestaurantCard = (props) => {
 //Higher order Component
 // export const openResturantLabel = (RestaurantCard) => {
 //   return (props) => {
-//     return (
+
 
 export default RestaurantCard;
