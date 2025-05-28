@@ -67,7 +67,7 @@ const RestaurantCard = (props) => {
   );
 };
 //Higher order Component
-//Higher order Component
+
 
 
 
