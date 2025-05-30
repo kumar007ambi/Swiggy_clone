@@ -12,7 +12,7 @@ const ItemList = ({ data, restaurant }) => {
   const dispatch = useDispatch()
   const selectedRestaurant = useSelector(state => state.cart.selectedRestaurant);
 
-  // console.log("dat", selectedRestaurant);
+
   const handleAddItem = () => {
     // Dispatch an action
     let dataToAdd;
