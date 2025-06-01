@@ -1,13 +1,11 @@
 import { CDN_URL } from "../utils/constant";
 import { useDispatch, useSelector } from 'react-redux'
 import { addItem, computeTotal, setRestaurant } from "../utils/cartSlice";
-// import { ToastContainer, toast } from 'react-toastify';
 import { BsCaretDownSquare } from "react-icons/bs";
 
 import 'react-toastify/dist/ReactToastify.css';
 
 const ItemList = ({ data, restaurant }) => {
-  
   const { name, price, defaultPrice, description, imageId, isVeg } = data;
   const dispatch = useDispatch()
   const selectedRestaurant = useSelector(state => state.cart.selectedRestaurant);
