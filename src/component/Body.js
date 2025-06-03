@@ -39,7 +39,7 @@ const Body = () => {
     setShowShimmer(false);
     //optional chaining
     setAllData(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
-    // console.log("body",json?.data?.cards[0]?.card?.card?.imageGridCards?.info)
+   
     setListOfRest(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
