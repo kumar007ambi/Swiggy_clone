@@ -43,7 +43,7 @@ const Body = () => {
     setListOfRest(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    // console.log( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+   
     setFilteredRestuarnt((filteredResturant) =>[...filteredResturant,...
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     ]);
