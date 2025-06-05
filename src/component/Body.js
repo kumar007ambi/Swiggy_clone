@@ -50,7 +50,7 @@ const Body = () => {
   };
 
   const customHook=useRestaurantList(WEB_API)
-  //console.log(customHook)
+  
 
   const onlineStatus = useOnlineStatus();
 
