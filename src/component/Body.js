@@ -69,7 +69,7 @@ const Body = () => {
     <Banner/>
       {/* <div className="filter flex">
         <div className="search p-4 m-4 ">
-            type="text"
+           
             data-testid="searchInput"
             className="border border-solid border-black rounded"
             value={searchText}
