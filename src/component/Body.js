@@ -71,7 +71,7 @@ const Body = () => {
         <div className="search p-4 m-4 ">
            
           
-            onChange={(e) => {
+            
               setSearchText(e.target.value);
             }}
           />
