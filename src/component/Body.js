@@ -71,7 +71,6 @@ const Body = () => {
         <div className="search p-4 m-4 ">
            
           
-            className="px-3 py-0.5 bg-blue-400 m-3 rounded"
             onClick={() => {
               //filter the resturant card according to text and Updates the UI
               console.log(searchText);
