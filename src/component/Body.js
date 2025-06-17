@@ -71,8 +71,6 @@ const Body = () => {
         <div className="search p-4 m-4 ">
            
           
-           
-              //filter the resturant card according to text and Updates the UI
               console.log(searchText);
               const filteredResturant = listOfRest.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
