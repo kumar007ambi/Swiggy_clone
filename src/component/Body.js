@@ -70,8 +70,7 @@ const Body = () => {
       {/* <div className="filter flex">
         <div className="search p-4 m-4 ">
            
-          
-              console.log(searchText);
+
               const filteredResturant = listOfRest.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
