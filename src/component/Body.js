@@ -71,8 +71,6 @@ const Body = () => {
         <div className="search p-4 m-4 ">
         
              
-        
-            Search
           </button>
         </div>
         <div className="search p-4 m-4 ">
