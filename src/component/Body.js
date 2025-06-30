@@ -70,7 +70,7 @@ const Body = () => {
       {/* <div className="filter flex">
         <div className="search p-4 m-4 ">
         
-            className="px-3 py-0.5 bg-green-400 m-3 rounded"
+           
             onClick={() => {
               const filteredList = listOfRest.filter(
                 (res) => res.info.avgRating > 4
