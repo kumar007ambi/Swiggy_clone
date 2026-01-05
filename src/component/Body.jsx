@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import RestaurantCard, { openResturantLabel } from "./RestaurantCard";
-import restaurantList from "../utils/mockData";
+import RestaurantCard from "./RestaurantCard";
+import { restaurantList } from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { WEB_API } from "../utils/constant";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -34,19 +34,28 @@ const Body = () => {
   }, []);
   const fetchData = async () => {
     setShowShimmer(true);
-    const data = await fetch(WEB_API);
-    const json = await data.json();
-    setShowShimmer(false);
-    //optional chaining
-    setAllData(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
-   
-    setListOfRest(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-   
-    setFilteredRestuarnt((filteredResturant) =>[...filteredResturant,...
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    ]);
+    try {
+      const data = await fetch(WEB_API);
+      const json = await data.json();
+      console.log('API Response:', json);
+      setShowShimmer(false);
+      //optional chaining
+      setAllData(json?.data?.cards[0]?.card?.card?.imageGridCards?.info || []);
+     
+      const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+      console.log('Restaurants:', restaurants);
+      setListOfRest(restaurants);
+     
+      setFilteredRestuarnt((prev) => [...prev, ...restaurants]);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      // Fallback to mock data
+      setShowShimmer(false);
+      setAllData([]);
+      const mockRestaurants = restaurantList.map(r => ({ info: r.data }));
+      setListOfRest(mockRestaurants);
+      setFilteredRestuarnt(mockRestaurants);
+    }
   };
 
   const customHook=useRestaurantList(WEB_API)
@@ -83,9 +92,9 @@ const Body = () => {
         </div>
       </div> */}
       <div className="restaurant-container grid grid-cols-4 gap-8">
-        {filteredResturant.map((restuarant) => (
+        {filteredResturant.map((restuarant, index) => (
           <Link
-            key={restuarant.info.id}
+            key={`${restuarant.info.id}-${index}`}
             to={"/restaurants/" + restuarant.info.id}
             className="transition-all duration-100 hover:scale-95"
           >
