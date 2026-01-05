@@ -50,9 +50,7 @@ const RestaurantCard = (props) => {
             <h4>{avgRating} <img className="w-5 h-10 ml-[15px] mt-[-30px]" src={dot} alt="dot" /></h4>
           </div>
           <div className="ml-[55px] mt-[-30px] font-bold" >
-            <h4>
-              <h4> {slaString} </h4>{" "}
-            </h4>
+            <h4> {slaString} </h4>
           </div>
         </div>
         <div className="">
