@@ -10,8 +10,7 @@ const useRestaurantMenu = (resId) => {
 
   const fetchMenu = async () => {
     try {
-      // const data = await fetch(SWIGGY_MENU_URL + resId); 
-      const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.6862992&lng=88.38947689999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+      const data = await fetch(SWIGGY_MENU_URL + resId); 
       if (!data.ok) {
         setResInfo(mockResMenu.data);
         return;
