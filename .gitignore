@@ -3,3 +3,4 @@
 .parcel-cache
 /coverage
 .vercel
+.env*.local
